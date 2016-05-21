@@ -1,5 +1,7 @@
 a {  color: #666;
 }
+a:hover {  color: #f70f0f;
+}
 
 @media only screen and (min-width: 993px)
 {.container {
@@ -28,8 +30,37 @@ a {  color: #666;
 .carousel-thumbnails .carousel-indicators {
     margin-bottom: -115px;
 }
+.carousel-control {
+	color: #1c2331;
+	text-shadow:none;
+}
+.carousel-control.left {
+	background-image: none;	
+}
+.carousel-control.right {
+	background-image: none;	
+}
+
+.carousel-control .icon-next, .carousel-control .icon-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -15px;
+    font-size: 40px;
+}
+.carousel-indicators li {
+	margin: 0px;
+}
+.carousel-inner>.carousel-item>a>img, .carousel-inner>.carousel-item>img, .img-fluid {
+    min-width: 100%;
+}
 .modal-content {
 border-radius: .4rem!important;
+}
+body.modal-open {
+	overflow:none;
+}
+body {
+	overflow:none!important;
 }
 
 #delivery  label {
@@ -518,6 +549,17 @@ input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, 
     box-shadow: 0 0px 0 0 #4CAF50;
 }
 
+input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
+	border-bottom:1px solid #03a71a;
+	box-shadow:0 1px 0 0 #03a71a
+}
+input[type=date]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=search-md]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, textarea.md-textarea:focus:not([readonly])+label {
+	color:#03a71a
+}
+.btn-primary:focus, .btn-primary:hover {
+	background-color:#27ae60!important
+}
+
 .new_card label {
     color: #6e6e6e;
 }
@@ -721,7 +763,8 @@ padding-top:30px;
 .product_mg {
 	padding: 20px 0 0 0;
 	font-size: 14px;
-	line-height: 26px;
+	line-height: 20px;
+    text-align: justify;
 }
 .product_report {
 	width:105px;

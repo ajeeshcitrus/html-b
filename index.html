@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	<!-- Your custom styles (optional) -->
+    <link href="css/sellfie.css" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	 <div class="red_strip">
+         <div class="container">
+            <div class="sellfie_logo"><a href="index.html"><img src="img/sellfie.png" class="img-responsive"></a></div>
+            <ul>
+               <li><a href="javascript:void(0);" data-toggle="modal" data-target="#login">LOGIN</a></li>
+               <li>|</li>
+               <li><a href="javascript:void(0);" data-toggle="modal" data-target="#signup">SIGN UP</a></li>
+            </ul>
+         </div>
+      </div>
+	  
+	   <div class="container main-content">
+         <div id="preloader-container">
+            <div class="store">
+               <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2 no_padding profile"> <img src="img/profile.png" class="img-responsive"> </div>
+               <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 no_padding banner">
+			   <div class="hi">ILLAGO <span>Camp</span></div>
+			   <img src="img/store.jpg" class="img-responsive"> </div>
+            </div>
+            <div class="">
+               <div class="product">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product_slider no_padding">
+                     <div id="slider" class="flexslider">
+                        <ul class="slides">
+                           <li> <img src="images/moto1zoom.jpeg" /> </li>
+                           <li> <img src="images/moto2zoom.jpeg" /> </li>
+                           <li> <img src="images/moto3zoom.jpeg" /> </li>
+						   <li> <img src="images/moto1zoom.jpeg" /> </li>
+                           <li> <img src="images/moto2zoom.jpeg" /> </li>
+                           <li> <img src="images/moto3zoom.jpeg" /> </li>
+                        </ul>
+                     </div>
+                     <div id="carousel" class="flexslider">
+                        <ul class="slides">
+                           <li> <img src="images/moto1zoom.jpeg" /> </li>
+                           <li> <img src="images/moto2zoom.jpeg" /> </li>
+                           <li> <img src="images/moto3zoom.jpeg" /> </li>
+						   <li> <img src="images/moto1zoom.jpeg" /> </li>
+                           <li> <img src="images/moto2zoom.jpeg" /> </li>
+                           <li> <img src="images/moto3zoom.jpeg" /> </li>
+						   
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="description">
+                     <div class="product_name">MOTO SMART WATCH</div>
+                     <div class="product_at">₹ 5,000 <span>+ Delivery Charges ₹ 100</span></div>
+                     <div class="product_mg">With intricate embossed dial patterns, touches of pop colors on the tips of dial hands, all pairedwith a storng case and band design, bullet
+                        chrono is unapologetically bold and wearable 
+                     </div>
+                     <div class="product_report" data-toggle="modal" data-target="#report">Report this item</div>
+                     <div class="btn_box">
+                        <div class="buy_btn" data-toggle="modal" data-target="#delivery">BUY</div>
+                        <a href="chat.html"><div class="buy_btn">CHAT</div></a>
+                     </div>
+                     <div class="secure">Until the product comes in your hands,
+                        your money stays secure with us.
+                     </div>
+					 </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer_gap"></div>
+         </div>
+         <!-- Button trigger modal --> 
+      </div>
+	 
+
+    <!-- Start your project here-->
+	
+	<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="delivery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<div class="space_30"></div>
+        <h2 class="modal-title" id="myModalLabel">Delivery Details</h2>
+      </div>
+      <div class="modal-body">
+        <div class="delivery_form">		
+				<div class="row">
+	   
+		
+			<div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_1.png" />Personal Details</div>
+		 <div class="clearfix"></div>
+		 
+			<div class="col-md-12">
+                <div class="md-form">
+                    <input type="text" id="name" class="form-control">
+                    <label for="name" class="">Name</label>
+                </div>
+            </div>
+			
+		
+			<div class="col-md-6">
+                <div class="md-form">
+                    <input type="text" id="mobile" class="form-control">
+                    <label for="mobile" class="">Mobile</label>
+                </div>
+            </div>
+			
+			<div class="col-md-6">
+                <div class="md-form">
+                    <input type="text" id="email" class="form-control">
+                    <label for="email" class="">Email Address</label>
+                </div>
+            </div>
+	
+		
+			<div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_2.png" />Location</div>
+			
+		
+			<div class="input-field col-md-12 col-xs-12">	
+			<input id="address" type="tel" class="validate">
+			<label for="address" class="">Address</label>
+			</div>	
+			
+			
+			
+			   <div class="input-field col-md-6 col-xs-6">	
+			<input id="city" type="tel" class="validate">
+			<label for="city" class="">City</label>
+			</div>	
+			
+			
+			
+			   <div class="input-field col-md-6 col-xs-6">	
+			<input id="state" type="tel" class="validate">
+			<label for="state" class="">State</label>
+			</div>	
+			
+			
+			
+			   <div class="input-field col-md-6 col-xs-6">	
+			<input id="pin" type="tel" class="validate">
+			<label for="pin" class="">Pin Code</label>
+			</div>	
+			
+			
+			
+			   <div class="input-field col-md-6 col-xs-6">	
+			<input id="landmark" type="tel" class="validate">
+			<label for="landmark" class="">Landmark</label>
+			</div>	
+			
+		
+			<div class="col-md-12 col-xs-12 ml_sub">We always want to give something extra</div>
+		
+		
+			<div class="input-field col-md-12 col-xs-12">	
+			<input id="location" type="tel" class="validate">
+			<label for="location" class="">Add Comments (Optional)</label>
+			</div>	
+		
+			</div>
+		</div> 
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+<script>
+	$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})</script>
+</body>
+
+</html>

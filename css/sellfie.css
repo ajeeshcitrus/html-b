@@ -1,3 +1,6 @@
+a {  color: #666;
+}
+
 @media only screen and (min-width: 993px)
 {.container {
     width: 76%!important;
@@ -15,11 +18,24 @@
 @media (min-width: 992px)
 {#delivery .modal-dialog { width: 500px;}
 }
+.carousel-indicators{	
+	    width: 100%;
+		left:30%;
+}
+.carousel-thumbnails .carousel-indicators img {    
+    height: 100%;
+}
+.carousel-thumbnails .carousel-indicators {
+    margin-bottom: -115px;
+}
+.modal-content {
+border-radius: .4rem!important;
+}
 
 #delivery  label {
 	color:#afafaf;
     font-weight: normal!important;
-	top: 2.5rem;
+	top: 2rem;
 	left: .3rem;
 }
 #delivery img{
@@ -137,7 +153,7 @@ height:45px!important;
 .modal-body .ml_sub {
     font-size:16px;
 	text-align:left;
-	padding:20px 0 0 30px;
+	padding:20px 0 0 15px;
 }
 .modal-body .ml_caption  img{
     padding:0 10px 0 0;
@@ -159,7 +175,7 @@ font-size:24px;
 	border-top: none!important;
 }
 .btn{
-padding:0px 40px!important;
+padding:8px 40px!important;
 }
 
 .btn-primary{    
@@ -226,7 +242,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
    font-size: 1rem;
 }
 input, textarea {
-    padding: 30px 0px 0px 5px !important;
+    padding: 25px 0px 0px 5px !important;
 }
 
 .input-field label {   
@@ -251,7 +267,7 @@ input, textarea {
 }
 
 .sign_in_tt{
-padding:30px 0 8px 0;
+padding: 20px 0 15px 0;
 }
 .sign_in_form{
 width:210px;
@@ -708,6 +724,7 @@ padding-top:30px;
 	line-height: 26px;
 }
 .product_report {
+	width:105px;
 	padding: 15px 0 0 0;
 	font-size: 14px;
 	color: #6a6a6a;

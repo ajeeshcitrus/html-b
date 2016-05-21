@@ -290,8 +290,8 @@ font-size:12px;
 }
 .hi{
 width:100%;
-font-size:20px;
-padding:15px 0 15px 30px;
+font-size:18px;
+padding:15px 0 15px 20px;
 color:#fff;
 border-radius:0 0 .50em 0;
 background:url('../img/black_bg.png');
@@ -353,7 +353,7 @@ background:url('../img/location.png') no-repeat right 0;
 float:right;
 font-size:16px;
 padding:0 20px 0 0;
-margin:0 40px 0 0;
+margin:0 20px 0 0;
 text-align:right;
 } 
 .white-panel .modal-header .close {
@@ -957,6 +957,7 @@ background:#f57f7f!important;
  display: -webkit-flex;
  display: flex; 
  border-radius:.50em;
+ margin:100px 0 0 0;	
  }
 .store img {
  width: 100%;

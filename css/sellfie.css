@@ -996,6 +996,10 @@ background:#f57f7f!important;
 	float: left;
 	padding: 6px 0 0 0;
 }
+.logo_icon{
+	height: 20px;
+	margin:0 10px 0 0;
+}
 .red_strip ul {
 	float: right;
 	margin: 0;
@@ -1059,6 +1063,7 @@ width:100%;
 	width: 18px;
 	margin:0 10px 0 0;
 }
+
 .no_padding {
 	padding: 0px !Important;
 	margin: 0px !Important;

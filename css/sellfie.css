@@ -320,7 +320,15 @@ input, textarea {
     margin-top: 0rem;
 }
 .input-field label.active {
-    font-size: 1rem;
+    font-size: 1rem;	
+}
+.md-form label {
+    top: 1.9rem !important;
+	left: 4px;
+	color:#afafaf;
+}
+.md-form label.active {
+    font-size: 0.7rem;
 }
 #sell_model .modal-header {    
     padding: 0 0px 0px 0px!important;
@@ -883,14 +891,31 @@ box-shadow: 0px 15px 12px -6px #cfcccc;
     padding: 5px 0 20px 0;
 }
 .chat{
-	background: #f2efef;
+	background: #fafafb;
 	width: 400px;
 	position: fixed;
 	bottom: 0px;
 	right:0px;
 	z-index: 700;
 	border:1px solid #c4c4c4;
-	border-radius: .50em .50em 0 0;
+-webkit-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+-moz-box-shadow:    -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+box-shadow:         -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+}
+.chat .bu{
+bottom:0px;
+float:left;
+width:100%;
+color:#ffffff;
+text-align:center;
+line-height:50px;
+background:#78c899;
+
+}
+.chat .type{
+	float:left;
+	width:100%;
+	padding: 15px 15px 40px 10px;
 }
 .chat .send{
 bottom:0px;
@@ -920,7 +945,7 @@ color:#27ae60;
 
 .chat .title{
 width:100%;
-border-radius: .50em .50em 0 0;
+float:left;
 background:#fff;
 padding:12px 20px;
 font-size:18px;
@@ -928,9 +953,46 @@ font-size:18px;
 -moz-box-shadow: 0px 5px 5px 0px #cfcccc;
 box-shadow: 0px 5px 5px 0px #cfcccc;
 }
-.chat .title span{
-float:right;
-cursor:pointer;
+
+.chat .top{
+float:left;
+width:100%;
+}
+.chat .name{
+width:200px;
+float:left;
+color:#404040;
+font-size:15px;
+}
+.chat .name span{
+width:100%;
+float:left;
+color:#B5B5B5;
+font-size:11px;
+}
+.minus{
+	width:20px;
+	float:right;
+	margin:0 15px 0 0;
+}
+.minus_ic{
+	width:17px;
+}
+.hangburger{
+	width:25px;
+	color:#6a6a6a;
+	float:left;	
+padding:0 20px 0 0;
+}
+.hangburger_ic{
+	width:20px;
+}
+.chat_close{
+	width:20px;
+	float:right;
+}
+.chat_close_ic{
+	width:12px;
 }
 .chat .conver{
 float:left;
@@ -1168,16 +1230,7 @@ body {
 .modal-header h2 {
     font-size: 18px!important;
 }
-.input-field {
-    margin-top: 0rem!important;
-}
-input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="time"], input[type="date"], input[type="datetime-local"], input[type="tel"], input[type="number"], input[type="search"], textarea.materialize-textarea {
-font-size: 1.4rem;
-margin:0px;
-}
-.input-field label {
-    font-size: 1.1rem !important;
-}
+
 .space_50 {
     height: 25px!important;
 }
@@ -1326,5 +1379,22 @@ font-size: 14px!important;
 }
 .chat{
 width:95%;
+}
+.chat{
+	background: #fafafb;
+	width: 100%;
+	position: fixed;
+	bottom: none;
+	top:0;
+	right:0px;
+	height:auto;
+	z-index: 700;
+	border:none;
+}
+.chat .bu {
+	position: fixed;
+}
+.chat .type {
+    width: 99%;
 }
 }

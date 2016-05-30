@@ -1172,7 +1172,7 @@ width:100%;
 }
 
 
-@media only screen and (max-width: 360px)
+@media only screen and (max-width: 375px)
 {
 	.carousel-indicators {
     left: 103%;

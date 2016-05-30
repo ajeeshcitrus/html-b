@@ -985,6 +985,7 @@ padding:0 0 0 10px;
 .chat_one p{
 float:left;
 width:80%;
+margin-bottom:10px;
 font-size:15px;
 color:#404040;
 padding:10px;
@@ -1010,10 +1011,13 @@ width:80%;
 font-size:15px;
 color:#fff;
 padding:10px;
+margin-bottom:10px;
 border-radius:.50em;
 background:#78c899 !important;
 }
-
+.chat_lr{
+height:6px;	
+}
 .red_strip {
 	background: #f70f0f;
 	width: 100%;

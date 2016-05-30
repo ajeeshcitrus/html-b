@@ -851,13 +851,17 @@ box-shadow: 0px 15px 12px -6px #cfcccc;
 	background: #fafafb;
 	width: 400px;
 	position: fixed;
-	bottom: 0px;
+	bottom:0px;
+	height:auto;
 	right:0px;
 	z-index: 700;
 	border:1px solid #c4c4c4;
 -webkit-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
 -moz-box-shadow:    -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
 box-shadow:         -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+}
+.chat_big{
+	top:0;
 }
 .chat .bu{
 bottom:0px;
@@ -873,12 +877,15 @@ background:#78c899;
 	margin:80px 0 0 0;
 	width:100%;
 	height:200px;
-	overflow:scroll;
+	overflow-y:scroll;
 	padding: 15px 15px 40px 10px;
+}
+.type_bubble{
+	height:500px!important;
 }
 .chat .send{
 bottom:0px;
-padding:0 0 10px 0 !important;
+position:absolute;
 float:left;
 width:100%;
 background:#fff;
@@ -889,13 +896,11 @@ border-top:1px solid #c4c4c4;
 width:85%;
 float:left;
 }
-.chat .send .bu{
+.chat .send .bun{
 width:15%;
-right:0;
-bottom:0;
+float:right;
 text-align:center;
 padding:15px 10px;
-position:absolute;
 cursor:pointer;
 }
 .chat .send .bu:hover{
@@ -925,6 +930,9 @@ width:200px;
 float:left;
 color:#404040;
 font-size:15px;
+}
+.name_bubble{
+padding:0 0 0 20px;
 }
 .chat .name span{
 width:100%;
@@ -959,15 +967,14 @@ padding:0 20px 0 0;
 .chat .conver{
 float:left;
 width:100%;
-padding:20px;
 }
 
 .chat_one span{
 float:left;
-width:17%;
+width:6%;
 padding:0 20px 0 0;
 min-height:80px;
-background:url('../img/chat_gray.jpg') no-repeat right 10px !important;
+background:url('../img/bubble_lt.png') no-repeat right 10px !important;
 }
 .chat .time{
 float:left;
@@ -977,20 +984,19 @@ padding:0 0 0 10px;
 }
 .chat_one p{
 float:left;
-width:83%;
+width:80%;
 font-size:15px;
 color:#404040;
 padding:10px;
 border-radius:.50em;
-background:#e8e8e8!important;
+background:#dee8e1!important;
 }
 
 .chat_two span{
 float:right;
-width:17%;
-padding:0 0 0 20px;
+width:3%;
 min-height:80px;
-background:url('../img/chat_red.jpg') no-repeat left 10px !important;
+background:url('../img/bubble_rt.png') no-repeat left 10px !important;
 }
 .chat_two .time{
 float:right;
@@ -1000,12 +1006,12 @@ padding:0 0 0 10px;
 }
 .chat_two p{
 float:right;
-width:83%;
+width:80%;
 font-size:15px;
 color:#fff;
 padding:10px;
 border-radius:.50em;
-background:#f57f7f!important;
+background:#78c899 !important;
 }
 
 .red_strip {
@@ -1357,6 +1363,5 @@ font-size: 14px!important;
 .chat .type {
     width: 99%;
 	height:200px;
-	overflow:scroll;
 }
 }

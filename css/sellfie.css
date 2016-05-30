@@ -299,20 +299,6 @@ height:50px;
 	/*left: 3.6rem;*/
 }
 
-
-
-input, textarea {
-    padding: 25px 0px 0px 5px !important;
-}
-
-.md-form label {
-    top: 1.9rem !important;
-	left: 4px;
-	color:#afafaf;
-}
-.md-form label.active {
-    font-size: 0.7rem;
-}
 #sell_model .modal-header {    
     padding: 0 0px 0px 0px!important;
     border-bottom: none!important;
@@ -550,7 +536,6 @@ padding:40px 0 0 0;
 .new_card .input-field {    
     margin-top: 0rem;
 }
-	
 .btn-primary:focus, .btn-primary:hover {
 	background-color:#27ae60!important
 }
@@ -1196,9 +1181,7 @@ body {
 .caption {
 	font-size: 14px!important;
 }
-.input-field label {
-    font-size: 1.3rem!important;
-}
+
 .modal-header h2 {
     font-size: 18px!important;
 }

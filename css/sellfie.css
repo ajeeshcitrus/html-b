@@ -1342,6 +1342,7 @@ font-size: 14px!important;
 	height:auto;
 	z-index: 700;
 	border:none;
+	position: absolute;
 }
 .chat .bu {
 	position: fixed;

@@ -57,7 +57,7 @@
       <div class="title">
         <div class="top"> 
           <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
-          <div class="name">Illago <span>Active in the last 15 minutes<span></div>
+          <div class="name">Illago <span> <div id="" class="user_status"></div> <span></div>
           <a onclick="closeChatBox();">
           <div class="chat_close"><img class="chat_close_ic" src="img/close.svg"></img></div>
           </a> <a onclick="minimiseChatBox();">
@@ -65,8 +65,10 @@
           </a> </div>
       </div>
       <div class="type" id="chat_message_box">
+        
+
 			
-    			<div class="circle type_hide">
+    			<div class="circle type_hide" id="chat_preloader">
     			  <div class="preloader-wrapper active">
     			 <div class="preloader-wrapper active">
     			 <div class="preloader-wrapper active">
@@ -85,7 +87,7 @@
     		  </div>
     		  </div>
     		  </div>
-	  
+	  <form id="login-form-chat">
         <div class="col-md-12">
           <div class="md-form"> <!-- Pree pree -->
             <input type="text" id="chat_name" class="form-control">
@@ -105,9 +107,20 @@
           </div>
         </div>
       </div>
-      <a>
+      <a onclick="loginAndSend();" id="login_send_btn">
       <div class="bu">SEND MESSAGE</div>
       </a> 
+      <div class="send type_hide" id="chat_send_btn">
+     <div class="col-md-10 col-xs-10">
+      <div class="md-form">
+                <input type="text" id="bun" class="form-control message_input">
+                <label for="bun" class="">Type your message</label>
+              </div>
+      </div>  
+      
+      <div class="bun send_message">SEND</div>
+     </div>
+    </form>
 	  </div>
 	  
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page_gap">
@@ -189,13 +202,13 @@
                 <label for="name" data-error="Enter a valid name" class="">Name</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_mobile" id="mobile" class="form-control">
                 <label for="mobile" data-error="Enter a valid mobile" class="">Mobile</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_email" id="email" class="form-control">
                 <label for="email" data-error="Enter a valid email" class="">Email Address</label>
@@ -209,25 +222,25 @@
                 <label for="address" data-error="Enter a valid address" class="">Address</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_city" id="city" class="form-control">
                 <label for="city" data-error="Enter a valid city" class="">City</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_state" id="state" class="form-control">
                 <label for="state" data-error="Enter a valid city" class="">State</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_pin" id="pin" class="form-control">
                 <label for="pin" data-error="Enter a valid pincode" class="">Pin Code</label>
               </div>
             </div>
-            <div class="col-md-6 col-xs-6"">
+            <div class="col-md-6 col-xs-6">
               <div class="md-form"> <!-- Pree pree -->
                 <input type="text" name="delivery_landmark" id="land" class="form-control">
                 <label for="land" data-error="Enter a valid landmark" class="">Landmark</label>
@@ -401,8 +414,39 @@ function minimiseChatBox(){
     $('#chat_message_box').addClass('type_hide');
     $('#chat_box').addClass('minimized');
   }
-
 }
+</script>
+
+<script>
+
+//signup user
+
+
+function loginAndSend(){
+
+  $('#chat_preloader').removeClass('type_hide');
+   $('#login-form-chat').addClass('type_hide');
+
+  //Do ajax call to server, login the user and login to chat
+  formData = $('#login-form-chat').serialize();
+
+  $.ajax({ 
+      url: 'https://httpbin.org/get',
+      data: formData,
+      type: 'get',
+      success: function(response) {
+        console.log(response);
+          chatClick();
+      },
+      error: function() {
+         
+      }
+   });
+}
+
+</script>
+
+<script>
 
 </script>
 

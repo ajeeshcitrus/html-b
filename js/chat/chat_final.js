@@ -8,9 +8,10 @@ var chat_token = 'a63d9a7d084d1eab921c45e810c0e85f4dee7061';
 var app_id = 35064;
 
 //User details
-var currentUser = 12744572;
-var currentUsername = 9995346716;
-var otherUser = 12753529;
+var currentUser = 12758304;
+var currentUsername = 8452939048;
+var otherUser = 12744572;
+
 var pass = 'longtestpassword';
 var occupantsIds = [];
 var userId;
@@ -31,6 +32,8 @@ $(document).ready(function() {
 
 //Initialise listeners
 
+$('.user_status').attr('id',otherUser);
+
 userStatusListener();
 messageReadListener();
 messageDeliveredListener();
@@ -43,7 +46,7 @@ setupMsgScrollHandler();
 
 
 //Click event on chat button 
-chatClick();
+// chatClick()
 
 //Dialog click event
 // dialogClick();
@@ -91,6 +94,20 @@ QB.createSession({login: currentUsername, password: pass}, function(err, res) {
 			      } else {
 
 			      	console.log('Roster');
+
+
+              //Remove preloader
+              $('#chat_preloader').addClass('type_hide');
+              $('#login_send_btn').addClass('type_hide');
+              
+
+              $('#chat_send_btn').removeClass('type_hide');
+              $('#chat_box').removeClass('minimized');
+
+              //Make chat window big
+              $('#chat_box').addClass('animated bounceIn');
+              $('#chat_box').addClass('chat_big');
+              $('#chat_message_box').addClass('type_bubble');
 
 			      	if(type == 'initiate_chat'){
 			      		//Add user to roster if not added 
@@ -295,13 +312,13 @@ function triggerDialog(dialogId){
 
   $('.list-group-item.active .badge').text(0).delay(250).fadeOut(500);
 
-  $('#messages-list').html('');
+  $('#chat_message_box').html('');
 
   // load chat history
   //
   retrieveChatMessages(dialogs[dialogId], null);
 
-  $('#messages-list').scrollTop($('#messages-list').prop('scrollHeight'));
+  $('#chat_message_box').scrollTop($('#chat_message_box').prop('scrollHeight'));
 }
 
 //---------------------------------------------------------MESSAGE FUNCTIONS------------------------------------------------//
@@ -361,7 +378,7 @@ function retrieveChatMessages(dialog, beforeDateSent){
 
           var messageHtml = buildMessageHTML(messageText, messageSenderLogin, messageSenderId ,messageDateSent, messageAttachmentFileId, messageId);
 
-          $('#messages-list').prepend(messageHtml);
+          $('#chat_message_box').prepend(messageHtml);
 
 
 
@@ -374,7 +391,7 @@ function retrieveChatMessages(dialog, beforeDateSent){
             $('#read_'+messageId).fadeOut(200);
           }
 
-          if (i > 5) {$('#messages-list').scrollTop($('#messages-list').prop('scrollHeight'));}
+          if (i > 5) {$('#chat_message_box').scrollTop($('#chat_message_box').prop('scrollHeight'));}
 
         });
       }
@@ -401,17 +418,17 @@ function showMessage(userId, msg, attachmentFileId) {
   var userLogin = getUserLoginById(userId);
   var messageHtml = buildMessageHTML(msg.body, userLogin, userId, new Date(), attachmentFileId, msg.id);
 
-  $('#messages-list').append(messageHtml);
+  $('#chat_message_box').append(messageHtml);
 
   // scroll to bottom
-  var mydiv = $('#messages-list');
+  var mydiv = $('#chat_message_box');
   mydiv.scrollTop(mydiv.prop('scrollHeight'));
 }
 
 
 function setupMsgScrollHandler() {
-  var msgWindow = $('.chat_window');
-  var msgList = $('#messages-list');
+  var msgWindow = $('#chat_box');
+  var msgList = $('#chat_message_box');
 
   msgList.scroll(function() {
   	// console.log('scrolling');
@@ -572,6 +589,7 @@ function addOtherUserToRoster(roster){
     if(jQuery.isEmptyObject(roster)){
 
          console.log('Roster is empty');
+         rosterAdd();
          //If roaster is empty do nothing. Nothing to attach to contact list
 
       } else {
@@ -684,30 +702,46 @@ function userStatusListener(){
 	// Listen User Online/Offline Status
 	QB.chat.onContactListListener = function(userId, type) {
 	  log("onContactListListener for user " + userId + ". Is online: " + (type === undefined || type == 'available'));
+
+    if((type === undefined || type == 'available')){
+        $('#'+otherUser).html('Online');
+    } else {
+       $('#'+otherUser).html('Offline');
+       $('#typing').remove();
+    }
 	};
 }
 
 function messageReadListener(){
 	// Listen User Online/Offline Status
-	QB.chat.onContactListListener = function(userId, type) {
-	  log("onContactListListener for user " + userId + ". Is online: " + (type === undefined || type == 'available'));
-	};
+	// QB.chat.onContactListListener = function(userId, type) {
+	//   log("onContactListListener for user " + userId + ". Is online: " + (type === undefined || type == 'available'));
+	// };
 }
 
 function messageDeliveredListener(){
 	// Listen User Online/Offline Status
-	QB.chat.onContactListListener = function(userId, type) {
-	  log("onContactListListener for user " + userId + ". Is online: " + (type === undefined || type == 'available'));
-	};
+	// QB.chat.onContactListListener = function(userId, type) {
+	//   log("onContactListListener for user " + userId + ". Is online: " + (type === undefined || type == 'available'));
+	// };
 }
 
 function otherUsertypingListener(){
 	// show typing status in chat or groupchat
 	QB.chat.onMessageTypingListener = function onMessageTyping(isTyping, userId, dialogId) {
 		if(isTyping){
-			console.log('otherUser is typing..');
+
+      $('#'+otherUser).html('typing...');
+
+     
+      var typing_html = '<div id="typing" class="conver chat_one"><span></span><p><img class="chat_lr" src="img/type.gif"></p></div>';
+      $('#chat_message_box').append(typing_html);
+
+
 		} else {
-			console.log('otherUser stopped!');
+			
+      $('#typing').remove();
+
 		}
 		
 	  // showUserIsTypingView(isTyping, userId, dialogId);
@@ -793,6 +827,8 @@ function onMessageListenerFn(){
 
 	  QB.chat.onMessageListener = function onMessage(userId, msg) {
 
+      console.log(userId);
+
 	  var audio = new Audio('./sound/the-calling.mp3');
 	  audio.play();
 
@@ -859,15 +895,12 @@ function buildMessageHTML(messageText, messageSenderId, userId, messageDateSent,
 
 
   if(userId == currentUser){
-      var messageHtml = '<li id="'+messageId+'"class="message left appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">'+(messageAttach ? messageAttach : messageText)+'</div></div></li>';
+      var messageHtml = '<div id="'+messageId+'" class="conver chat_two"><span></span><p>'+(messageAttach ? messageAttach : messageText)+'</p><div class="time">22 sec ago</div></div>';
   } else {
-      var messageHtml = '<li id="'+messageId+'" class="message right appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">'+(messageAttach ? messageAttach : messageText)+'</div></div></li>';
+      var messageHtml = '<div id="'+messageId+'" class="conver chat_one"><span></span><p>'+(messageAttach ? messageAttach : messageText)+'</p><div class="time">22 sec ago</div></div>';
   }
   return messageHtml;
 }
-
-
-
 
 function log(string){
   console.log(string);

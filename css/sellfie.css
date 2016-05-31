@@ -20,6 +20,10 @@ a:hover {  color: #f70f0f;
 @media (min-width: 992px)
 {#delivery .modal-dialog { width: 500px;}
 }
+.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
+    background-color: inherit;
+    border-bottom: 2px solid #4285F4;
+}
 .circle{
 	width:50px;
 	margin:0 auto;	
@@ -94,9 +98,7 @@ body {
 .card_form .md-form label.active {
     font-size: .7rem;
 }
-.card_form .form-control {
-    color: #D8D8D8;
-}
+
 .expiry{
 	padding:15px 0 0 15px;
 	text-align:left;
@@ -209,6 +211,10 @@ height:45px!important;
     filter: alpha(opacity=20);
     opacity: 1!important;
 }
+
+.modal-header {
+    padding: 0;
+}
 .modal-body .row {
     margin-bottom:5px!important;
 }
@@ -288,6 +294,27 @@ height:50px;
     float: left;
     width: 100%;
     height: 30px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+   margin: 0 0 0px 0;
+   font-size: 1rem;
+}
+input, textarea {
+    padding: 25px 0px 0px 5px !important;
+}
+
+.input-field label {   
+    font-size: 1.4rem;	
+	top: 3.5rem;
+	left: 2rem;
+	font-weight:normal;
+	}
+.input-field {  
+    margin-top: 0rem;
+}
+.input-field label.active {
+    font-size: 1rem;	
 }
 #sell_model .modal-body {
     padding:0px;
@@ -441,13 +468,14 @@ float:left;
 width:100%;
 font-size:26px;
 float:left;
+padding:15px 0 0 0;
 }
 .card_price span{
 width:300px;
 font-size:14px;
 float:right;
 text-align:right;
-color:#ccc;
+color:#B9B9B9;
 margin-top:12px;
 padding:0 50px 0 0;
 }
@@ -487,7 +515,7 @@ text-align:center;
 }
 .card_button{
 float:left;
-padding:30px 0 0 0;
+padding:20px 0 0 0;
 width:100%;
 }
 .card_button_space{
@@ -523,7 +551,8 @@ color:#404040!important;
     font-size: 1.5rem;
 }
 .new_card{
-background:#2b2b2b;
+background:#FDFDFD;
+border:1px solid #E4E4E4;
 border-radius: 1.5em;
 padding:5px 20px 35px 20px;
 color:#fff;
@@ -574,7 +603,7 @@ padding:40px 0 0 0;
     padding:0 22px;
 }
 .tab-content{
-padding:10px 0 0 0;
+padding:10px 0 20px 0;
 }
 .nav-tabs > li, .nav-pills > li {
     float:none!important;
@@ -646,6 +675,7 @@ padding: 10px 0 0 0;
 .bank{
 float:left;
 padding:12px 20px;
+margin: 10px 20px 0 20px;
 }
 .hdfc{
 background:url("../img/camera.png");
@@ -1196,7 +1226,14 @@ width:100%;
     width: 100%!important;
 }
 .delivery_form {
-    width: 285px!important;
+    width: 270px!important;
+}
+.modal-header .close {
+    margin-top: 16px !important;
+    margin-right: 15px;
+}
+.modal-header .close {
+    color:#C8C8C8 !important;
 }
 .description {
 	padding:0;
@@ -1257,10 +1294,17 @@ padding: 0 0 10px 33px;
 }
 .modal-body .ml_sub {
     font-size: 14px!important;
-    padding: 15px 0 0 30px!important;
+    padding: 15px 0 0 15px!important;
+}
+.space_30 {
+	display:none;
+}
+#delivery .ml_caption {
+    padding: 20px 0 0 15px;
 }
 .sign_in_tt {
-    padding: 25px 0 0px 0!important;
+    padding: 10px 0 10px 0!important;
+	font-size:11px;
 }
 
 .card_price_box {
@@ -1384,5 +1428,18 @@ font-size: 14px!important;
 }
 .description {
 	text-align:center;
+}
+.modal-dialog{
+	margin:0;
+	margin: 0 !important;
+}
+.modal-content {
+    border-radius:0 !important;
+}
+.card_price {
+    padding:0;
+}
+.net_banking img{
+    width:100%;
 }
 }

@@ -52,40 +52,30 @@
 </div>
 <div class="container main-content">
   <div id="preloader-container">
-    <div class="chat">
+    <div class="chat chat_big">
       <div class="title">
         <div class="top"> 
-          <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
+          <!-- <a><div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div></a> -->
           <div class="name">Illago <span>Active in the last 15 minutes<span></div>
           <a>
           <div class="chat_close"><img class="chat_close_ic" src="img/close.svg"></img></div>
-          </a> <a>
-          <div class="minus"><img class="minus_ic" src="img/minus.svg"></img></div>
-          </a> </div>
-      </div>
-      <div class="type">
-        <div class="col-md-12">
-          <div class="md-form">
-            <input type="text" id="name" class="form-control">
-            <label for="name" class="">Name</label>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="md-form">
-            <input type="text" id="mob" class="form-control">
-            <label for="mob" class="">Mobile Number</label>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="md-form">
-            <input type="text" id="message" class="form-control">
-            <label for="message" class="">Type your message</label>
-          </div>
+          </a> 
+          <!-- <a><div class="minus"><img class="minus_ic" src="img/minus.svg"></img></div></a> --> 
         </div>
       </div>
-      <a>
-      <div class="bu">SEND MESSAGE</div>
-      </a> </div>
+      <div class="type type_bubble">
+        <div class="contacts"> <img src="img/admin.jpg"></img> </div>
+      </div>
+      <div class="send">
+        <div class="col-md-10 col-xs-10">
+          <div class="md-form">
+            <input type="text" id="bun" class="form-control">
+            <label for="bun" class="">Type your message</label>
+          </div>
+        </div>
+        <div class="bun">SEND</div>
+      </div>
+    </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page_gap">
       <div class="product">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product_slider no_padding">
@@ -122,9 +112,6 @@
             <div class="product_at">₹ 5,000 <span>+ Delivery Charges ₹ 100</span></div>
             <div class="btn_box">
               <button type="button" class="btn btn-primary step step-1 waves-effect waves-light"  data-toggle="modal" data-target="#delivery" style="display: inline-block;"> BUY </button>
-            </div>
-            <div class="btn_box">
-              <button type="button" class="btn btn-primary step step-1 waves-effect waves-light"  data-toggle="modal" data-target="#card" style="display: inline-block;"> CARD </button>
             </div>
           </div>
         </div>
@@ -241,79 +228,108 @@
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#cards" role="tab">CARDS</a> </li>
             <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#net" role="tab">NET BANKING</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#wallet" role="tab">CITRUS WALLET</a> </li>
           </ul>
           
           <!-- Tab panels -->
           <div class="tab-content"> 
             <!--Panel 1-->
             <div class="tab-pane fade in active" id="cards" role="tabpanel">
-              <div id="second_nav">
-                <div class="new_card_box">
-                  <div class="col-md-12">
-                    <div class="md-form">
-                      <input type="text" id="card1" class="form-control">
-                      <label for="card1" class="">Card Number</label>
+              <div id="second_nav"> 
+                <!-- Second Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Panel 1</a> </li>
+                  <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Panel 2</a> </li>
+                </ul>
+                
+                <!-- Tab panels -->
+                <div class="tab-content"> 
+                  
+                  <!--Panel 1-->
+                  <div class="tab-pane active" id="panel1" role="tabpanel">
+                    <div class="no_card_box">
+                      <div class="no_card_image"> <img src="img/No-Saved-Cards_Desktop.gif" /></div>
+                      <div class="no_cards">You have no Saved Cards</div>
+                      <div class="card_button">
+                        <button type="button" class="btn btn-primary"> Add Card </button>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <!--/.Panel 1--> 
+                  
+                  <!--Panel 2-->
+                  <div class="tab-pane" id="panel2" role="tabpanel">
+                    <div class="new_card_box">
+                      <div class="new_card">
+                        <div class="col-md-12">
+                          <div class="md-form">
+                            <input type="text" id="card1" class="form-control">
+                            <label for="card1" class="">Card Number</label>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="md-form">
+                            <input type="text" id="name1" class="form-control">
+                            <label for="name1" class="">Name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-12 expiry">Expiry Date</div>
+                        <div class="col-md-3">
+                          <div class="md-form">
+                            <input type="text" id="mm" class="form-control">
+                            <label for="mm" class="">MM</label>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="md-form">
+                            <input type="text" id="yy" class="form-control">
+                            <label for="yy" class="">YY</label>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="md-form">
+                            <input type="text" id="cvv" class="form-control">
+                            <label for="cvv" class="">CVV</label>
+                          </div>
+                        </div>
+                        <div class="tooltip_cvv"> <a class="white-tooltip" data-toggle="tooltip" title="<img src='img/cvv_text.jpg'/>"> <img src="img/cvv.png"/> </a> </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="new_card_text">
+                        <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked">
+                        <label for="filled-in-box">Saved Card</label>
+                      </div>
+                    </div>
+                    <div class="card_button">
+                      <button type="button" class="btn btn-primary"> Continue to Pay </button>
                     </div>
                   </div>
-                  <div class="col-md-12">
-                    <div class="md-form">
-                      <input type="text" id="name1" class="form-control">
-                      <label for="name1" class="">Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-12 expiry">Expiry Date</div>
-                  <div class="col-md-3">
-                    <div class="md-form">
-                      <input type="text" id="mm" class="form-control">
-                      <label for="mm" class="">MM</label>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="md-form">
-                      <input type="text" id="yy" class="form-control">
-                      <label for="yy" class="">YY</label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="md-form">
-                      <input type="text" id="cvv" class="form-control">
-                      <label for="cvv" class="">CVV</label>
-                    </div>
-                  </div>
-                  <div class="tooltip_cvv"> <a class="white-tooltip" data-toggle="tooltip" title="<img src='img/cvv_text.jpg'/>"> <img src="img/cvv.png"/> </a> </div>
                   <div class="clearfix"></div>
-                  <div class="new_card_text">
-                    <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked">
-                    <label for="filled-in-box">Saved Card</label>
-                  </div>
+                  <!--/.Panel 2--> 
+                  
                 </div>
               </div>
             </div>
             <!--/.Panel 1--> 
             
             <!--Panel 2-->
-            <div class="tab-pane fade" id="net" role="tabpanel">
-              <div class="net_banking">
-                <div class="col-lg-4 col-xs-4 col-lg-offset-1 col-xs-offset-1 bank active"><img src="img/sbi.png"></div>
-                <div class="col-lg-4 col-lg-offset-2 col-xs-4 col-xs-offset-2 bank"><img src="img/hdfc.png"></div>
-                <div class="col-lg-4 col-xs-4 col-lg-offset-1 col-xs-offset-1 bank"><img src="img/axis.png"></div>
-                <div class="col-lg-4 col-lg-offset-2 col-xs-offset-2 col-xs-4 bank"><img src="img/idbi.png"></div>
-                <div class="clearfix"></div>
-                <div class="banks_list">
-                  <select class="form-control">
-                    <option value="" disabled="" selected="">Select Bank</option>
-                    <option value="1">SBI</option>
-                    <option value="2">HDFC</option>
-                    <option value="3">Axis</option>
-                  </select>
-                </div>
-                <div class="card_button">
-                  <button type="button" class="btn btn-primary"> Continue to Pay </button>
-                </div>
-                <div class="clearfix"></div>
-              </div>
+            <div class="tab-pane fade" id="net" role="tabpanel"> <br>
+              <p>Content for Panel 2</p>
             </div>
             <!--/.Panel 2--> 
+            
+            <!--Panel 3-->
+            <div class="tab-pane fade" id="wallet" role="tabpanel"> <br>
+              <p>Content for Panel 3</p>
+            </div>
+            <!--/.Panel 3--> 
+            
+            <!--Panel 4-->
+            <div class="tab-pane fade" id="panel4" role="tabpanel"> <br>
+              <p>Content for Panel 4</p>
+            </div>
+            <!--/.Panel 4--> 
             
           </div>
         </div>

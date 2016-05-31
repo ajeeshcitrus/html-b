@@ -20,6 +20,7 @@ a:hover {  color: #f70f0f;
 @media (min-width: 992px)
 {#delivery .modal-dialog { width: 500px;}
 }
+
 .carousel-indicators{	
 	    width: 100px;
 		left:117%;
@@ -641,8 +642,7 @@ padding: 10px 0 0 0;
 
 .bank{
 float:left;
-padding:12px 50px;
-margin:10px 0 25px 0;
+padding:12px 20px;
 }
 .hdfc{
 background:url("../img/camera.png");
@@ -689,7 +689,6 @@ padding-top:30px;
 }
 .description {
 	padding:20px 0 0 0;
-	text-align:center;
 }
 .product {
 	overflow: hidden;
@@ -1017,6 +1016,15 @@ background:#78c899 !important;
 }
 .chat_lr{
 height:6px;	
+}
+.contacts{
+  float:left;
+  width:100%;
+  padding:20px 0;
+  border-bottom:1px solid #ccc;
+}
+.contact img{
+	
 }
 .red_strip {
 	background: #f70f0f;
@@ -1367,5 +1375,8 @@ font-size: 14px!important;
 .chat .type {
     width: 99%;
 	height:200px;
+}
+.description {
+	text-align:center;
 }
 }

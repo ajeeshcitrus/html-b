@@ -20,7 +20,10 @@ a:hover {  color: #f70f0f;
 @media (min-width: 992px)
 {#delivery .modal-dialog { width: 500px;}
 }
-
+.circle{
+	width:50px;
+	margin:0 auto;	
+}
 .carousel-indicators{	
 	    width: 100px;
 		left:117%;

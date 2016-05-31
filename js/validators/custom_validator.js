@@ -20,7 +20,6 @@ $("#delivery_details_form").validate({
           minlength : "6",
       },
       delivery_landmark : "required",
-      delivery_message  : "required",
       delivery_name     : "required"
     },
     errorPlacement: function(error, element) {

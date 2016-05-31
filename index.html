@@ -52,7 +52,7 @@
 </div>
 <div class="container main-content">
   <div id="preloader-container">
-    <div class="chat">
+    <div class="chat type_hide" id="chat_box">
       <div class="title">
         <div class="top"> 
           <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
@@ -65,25 +65,25 @@
       </div>
       <div class="type">
 			
-			<div class="circle">
-			  <div class="preloader-wrapper active">
-			 <div class="preloader-wrapper active">
-			 <div class="preloader-wrapper active">
-		   <div class="preloader-wrapper active">
-			<div class="spinner-layer spinner-blue-only">
-			  <div class="circle-clipper left">
-				<div class="circle"></div>
-			  </div><div class="gap-patch">
-				<div class="circle"></div>
-			  </div><div class="circle-clipper right">
-				<div class="circle"></div>
-			  </div>
-			</div>
-		  </div>
-		  </div>
-		  </div>
-		  </div>
-		  </div>
+    			<div class="circle type_hide">
+    			  <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    		   <div class="preloader-wrapper active">
+    			<div class="spinner-layer spinner-blue-only">
+    			  <div class="circle-clipper left">
+    				<div class="circle"></div>
+    			  </div><div class="gap-patch">
+    				<div class="circle"></div>
+    			  </div><div class="circle-clipper right">
+    				<div class="circle"></div>
+    			  </div>
+    			</div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
 	  
         <div class="col-md-12">
           <div class="md-form">
@@ -114,7 +114,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product_slider no_padding">
           <div class="profile"><img src="img/profile.png" class="img-responsive"> </div>
           <div class="profile_name">Illago<span>Camp, Pune</span></div>
-          <a href="#">
+          <a href="#" onclick="openChatBox()">
           <div class="message"><img class="message_icon" src="img/message.svg"><span>MESSAGE</span></div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product_slider no_padding">
@@ -368,5 +368,20 @@
 
 <!-- MDB core JavaScript --> 
 <script type="text/javascript" src="js/mdb.min.js"></script>
+
+<!-- Chat Lib -->
+<script type="text/javascript" src="js/chat/quickblox.min.js"></script>
+
+<!-- Chat Javascript -->
+<script type="text/javascript" src="js/chat/chat_final.js"></script>
+
+<!-- Chat Controls -->
+
+<script>
+function openChatBox(){
+  $('#chat_box').removeClass('type_hide');
+}
+</script>
+
 </body>
 </html>

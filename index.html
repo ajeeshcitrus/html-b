@@ -52,6 +52,64 @@
 </div>
 <div class="container main-content">
   <div id="preloader-container">
+
+    <div class="chat type_hide" id="chat_box">
+      <div class="title">
+        <div class="top"> 
+          <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
+          <div class="name">Illago <span>Active in the last 15 minutes<span></div>
+          <a onclick="closeChatBox();">
+          <div class="chat_close"><img class="chat_close_ic" src="img/close.svg"></img></div>
+          </a> <a onclick="minimiseChatBox();">
+          <div class="minus"><img class="minus_ic" src="img/minus.svg"></img></div>
+          </a> </div>
+      </div>
+      <div class="type" id="chat_message_box">
+			
+    			<div class="circle type_hide">
+    			  <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    		   <div class="preloader-wrapper active">
+    			<div class="spinner-layer spinner-blue-only">
+    			  <div class="circle-clipper left">
+    				<div class="circle"></div>
+    			  </div><div class="gap-patch">
+    				<div class="circle"></div>
+    			  </div><div class="circle-clipper right">
+    				<div class="circle"></div>
+    			  </div>
+    			</div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
+	  
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_name" class="form-control">
+            <label for="name" class="">Name</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_mob" class="form-control">
+            <label for="mob" class="">Mobile Number</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_message" class="form-control">
+            <label for="message" class="">Type your message</label>
+          </div>
+        </div>
+      </div>
+      <a>
+      <div class="bu">SEND MESSAGE</div>
+      </a> 
+	  </div>
+	  
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page_gap">
       <div class="product">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product_slider no_padding">
@@ -113,6 +171,7 @@
 <div class="modal fade" id="delivery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+    <form id="delivery_details_form" action="#">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="space_30"></div>
@@ -125,70 +184,71 @@
             <div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_1.png" />Personal Details</div>
             <div class="clearfix"></div>
             <div class="col-md-12">
-              <div class="md-form">
-                <input type="text" id="name" class="form-control">
-                <label for="name" class="">Name</label>
+              <div class="md-form">  <!-- Pree pree -->
+                <input type="text" name="delivery_name" id="name" class="form-control">
+                <label for="name" data-error="Enter a valid name" class="">Name</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="mobile" class="form-control">
-                <label for="mobile" class="">Mobile</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_mobile" id="mobile" class="form-control">
+                <label for="mobile" data-error="Enter a valid mobile" class="">Mobile</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="email" class="form-control">
-                <label for="email" class="">Email Address</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_email" id="email" class="form-control">
+                <label for="email" data-error="Enter a valid email" class="">Email Address</label>
               </div>
             </div>
             <div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_2.png" />Location</div>
 			<div class="clearfix"></div>
             <div class="col-md-12">
-              <div class="md-form">
-                <input type="text" id="address" class="form-control">
-                <label for="address" class="">Address</label>
+              <div class="md-form">  <!-- Pree pree -->
+                <input type="text" name="delivery_address" id="address" class="form-control">
+                <label for="address" data-error="Enter a valid address" class="">Address</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="city" class="form-control">
-                <label for="city" class="">City</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_city" id="city" class="form-control">
+                <label for="city" data-error="Enter a valid city" class="">City</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="state" class="form-control">
-                <label for="state" class="">State</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_state" id="state" class="form-control">
+                <label for="state" data-error="Enter a valid city" class="">State</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="pin" class="form-control">
-                <label for="pin" class="">Pin Code</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_pin" id="pin" class="form-control">
+                <label for="pin" data-error="Enter a valid pincode" class="">Pin Code</label>
               </div>
             </div>
             <div class="col-md-6 col-xs-6"">
-              <div class="md-form">
-                <input type="text" id="land" class="form-control">
-                <label for="land" class="">Landmark</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_landmark" id="land" class="form-control">
+                <label for="land" data-error="Enter a valid landmark" class="">Landmark</label>
               </div>
             </div>
             <div class="col-md-12 col-xs-12 ml_sub">We always want to give something extra</div>
 			<div class="clearfix"></div>
             <div class="col-md-12">
-              <div class="md-form">
-                <input type="text" id="message" class="form-control">
-                <label for="message" class="">Message</label>
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_message" id="message"  class="form-control">
+                <label for="message" data-error="Enter a valid message" class="">Message</label>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary"> CONTINUE </button>
+          <button type="submit" value="" class="btn btn-primary"> CONTINUE </button>
         <div class="row sign_in_tt"> <span>By proceeding ahead, you agree </span> <a href="#">Terms &amp; Conditions</a> </div>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -315,6 +375,10 @@
 
 <!-- Chat Javascript -->
 <script type="text/javascript" src="js/chat/chat_final.js"></script>
+
+<!-- Validators  -->
+<script type="text/javascript" src="js/validators/jquery_validator_lib.js"></script>
+<script type="text/javascript" src="js/validators/custom_validator.js"></script>
 
 <!-- Chat Controls -->
 

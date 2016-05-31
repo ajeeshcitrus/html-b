@@ -1,78 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-        Material Design for Bootstrap    </title>
-    
-<!-- This site is optimized with the Yoast SEO plugin v3.2.5 - https://yoast.com/wordpress/plugins/seo/ -->
-<link rel="canonical" href="http://mdbootstrap.com/components/forms/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Forms" />
-<meta property="og:url" content="http://mdbootstrap.com/components/forms/" />
-<meta property="og:site_name" content="Material Design for Bootstrap" />
-<meta property="article:publisher" content="https://www.facebook.com/mdbootstrap" />
-<meta property="og:image" content="http://mdbootstrap.com/wp-content/uploads/2015/09/cropped-MDB-fav.png" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Forms" />
-<meta name="twitter:site" content="@MDBootstrap" />
-<meta name="twitter:image" content="http://mdbootstrap.com/wp-content/uploads/2015/09/cropped-MDB-fav.png" />
-<meta name="twitter:creator" content="@MDBootstrap" />
-<!-- / Yoast SEO plugin. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>Sellfie</title>
 
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/mdbootstrap.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.2"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='validate-engine-css-css'  href='http://mdbootstrap.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.7.1' type='text/css' media='all' />
-<link rel='stylesheet' id='bbp-default-css'  href='http://mdbootstrap.com/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.9-6017' type='text/css' media='screen' />
-<link rel='stylesheet' id='contact-form-7-css'  href='http://mdbootstrap.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.4.2' type='text/css' media='all' />
-<link rel='stylesheet' id='cookie-consent-style-css'  href='http://mdbootstrap.com/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='woocommerce-layout-css'  href='//mdbootstrap.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.5.5' type='text/css' media='all' />
-<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='//mdbootstrap.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.5.5' type='text/css' media='only screen and (max-width: 768px)' />
-<link rel='stylesheet' id='woocommerce-general-css'  href='//mdbootstrap.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.5.5' type='text/css' media='all' />
-<link rel='stylesheet' id='wsl-widget-css'  href='http://mdbootstrap.com/wp-content/plugins/wordpress-social-login/assets/css/style.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='Font_Awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='Bootstrap_css-css'  href='http://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/bootstrap.min.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='MDB-css'  href='http://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb.min.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='Custom-css'  href='http://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/style.min.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='Prism-css'  href='http://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/prism.min.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='Style-css'  href='http://mdbootstrap.com/wp-content/themes/mdbootstrap4/style.css?ver=4.5.2' type='text/css' media='all' />
-<script type='text/javascript' src='http://mdbootstrap.com/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
-<script type='text/javascript' src='http://mdbootstrap.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0'></script>
-<link rel='https://api.w.org/' href='http://mdbootstrap.com/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mdbootstrap.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mdbootstrap.com/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.5.2" />
-<meta name="generator" content="WooCommerce 2.5.5" />
-<link rel='shortlink' href='http://mdbootstrap.com/?p=62' />
-<link rel="alternate" type="application/json+oembed" href="http://mdbootstrap.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmdbootstrap.com%2Fcomponents%2Fforms%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://mdbootstrap.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmdbootstrap.com%2Fcomponents%2Fforms%2F&#038;format=xml" />
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=289867067833087&amp;ev=PixelInitialized" /></noscript>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+
+<!-- Your custom styles (optional) -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Your custom styles (optional) -->
+<link href="css/sellfie.css" rel="stylesheet">
 </head>
-<body >
 
-<!-- Live preview-->
+<body>
+<div class="red_strip">
+  <div class="container">
+    <div class="sellfie_logo"><a href="index.html"><img src="img/sellfie_logo.svg" class="img-responsive logo_icon"></a></div>
+    <ul>
+      <li><a href="javascript:void(0);" data-toggle="modal" data-target="#login">LOGIN</a></li>
+      <li>|</li>
+      <li><a href="javascript:void(0);" data-toggle="modal" data-target="#signup">SIGN UP</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container main-content">
+  <div id="preloader-container">
+
+    <div class="chat type_hide" id="chat_box">
+      <div class="title">
+        <div class="top"> 
+          <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
+          <div class="name">Illago <span> <div id="" class="user_status"></div> <span></div>
+          <a onclick="closeChatBox();">
+          <div class="chat_close"><img class="chat_close_ic" src="img/close.svg"></img></div>
+          </a> <a onclick="minimiseChatBox();">
+          <div class="minus"><img class="minus_ic" src="img/minus.svg"></img></div>
+          </a> </div>
+      </div>
+      <div class="type" id="chat_message_box">
+        
+
+			
+    			<div class="circle type_hide" id="chat_preloader">
+    			  <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    			 <div class="preloader-wrapper active">
+    		   <div class="preloader-wrapper active">
+    			<div class="spinner-layer spinner-blue-only">
+    			  <div class="circle-clipper left">
+    				<div class="circle"></div>
+    			  </div><div class="gap-patch">
+    				<div class="circle"></div>
+    			  </div><div class="circle-clipper right">
+    				<div class="circle"></div>
+    			  </div>
+    			</div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
+    		  </div>
+	  <form id="login-form-chat">
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_name" class="form-control">
+            <label for="name" class="">Name</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_mob" class="form-control">
+            <label for="mob" class="">Mobile Number</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="md-form"> <!-- Pree pree -->
+            <input type="text" id="chat_message" class="form-control">
+            <label for="message" class="">Type your message</label>
+          </div>
+        </div>
+      </div>
+      <a onclick="loginAndSend();" id="login_send_btn">
+      <div class="bu">SEND MESSAGE</div>
+      </a> 
+      <div class="send type_hide" id="chat_send_btn">
+     <div class="col-md-10 col-xs-10">
+      <div class="md-form">
+                <input type="text" id="bun" class="form-control message_input">
+                <label for="bun" class="">Type your message</label>
+              </div>
+      </div>  
+      
+      <div class="bun send_message">SEND</div>
+     </div>
+    </form>
+	  </div>
+	  
+	  
+	  
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page_gap">
+	
+      <div class="product">
+        <!-- Live preview-->
         <div class="row">
 
             <div class="col-md-6">
@@ -97,15 +153,281 @@ img.emoji {
 
         </div>
         <!-- /.Live preview-->
+      </div>
+    </div>
+    <div class="footer_gap"></div>
+  </div>
+</div>
 
-<!-- jQuery Plugins Initialization -->
-<script src="http://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script src="http://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bootstrap.min.js"></script>
-<!-- Material Design Bootsgtrap scripts -->
-<script src="http://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/mdb.min.js"></script>
-<script src="http://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/jquery.validate.js"></script>
+<!-- Delivery Modal -->
+<div class="modal fade" id="delivery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <form id="delivery_details_form" action="#">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="space_30"></div>
+		<div class="clearfix"></div>
+        <h2 class="modal-title" id="myModalLabel">Delivery Details</h2>
+      </div>
+      <div class="modal-body">
+        <div class="delivery_form">
+          <div class="row">
+            <div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_1.png" />Personal Details</div>
+            <div class="clearfix"></div>
+            <div class="col-md-12">
+              <div class="md-form">  <!-- Pree pree -->
+                <input type="text" name="delivery_name" id="name" class="form-control">
+                <label for="name" data-error="Enter a valid name" class="">Name</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_mobile" id="mobile" class="form-control">
+                <label for="mobile" data-error="Enter a valid mobile" class="">Mobile</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_email" id="email" class="form-control">
+                <label for="email" data-error="Enter a valid email" class="">Email Address</label>
+              </div>
+            </div>
+            <div class="col-md-12 col-xs-12 ml_caption"><img src="img/delivery_2.png" />Location</div>
+			<div class="clearfix"></div>
+            <div class="col-md-12">
+              <div class="md-form">  <!-- Pree pree -->
+                <input type="text" name="delivery_address" id="address" class="form-control">
+                <label for="address" data-error="Enter a valid address" class="">Address</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_city" id="city" class="form-control">
+                <label for="city" data-error="Enter a valid city" class="">City</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_state" id="state" class="form-control">
+                <label for="state" data-error="Enter a valid city" class="">State</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_pin" id="pin" class="form-control">
+                <label for="pin" data-error="Enter a valid pincode" class="">Pin Code</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_landmark" id="land" class="form-control">
+                <label for="land" data-error="Enter a valid landmark" class="">Landmark</label>
+              </div>
+            </div>
+            <div class="col-md-12 col-xs-12 ml_sub">We always want to give something extra</div>
+			<div class="clearfix"></div>
+            <div class="col-md-12">
+              <div class="md-form"> <!-- Pree pree -->
+                <input type="text" name="delivery_message" id="message"  class="form-control">
+                <label for="message" data-error="Enter a valid message" class="">Message</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" value="" class="btn btn-primary"> CONTINUE </button>
+        <div class="row sign_in_tt"> <span>By proceeding ahead, you agree </span> <a href="#">Terms &amp; Conditions</a> </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Cards Modal -->
+<div class="modal fade" id="card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="card_price_box">
+          <div class="card_price">₹ 5,100<span>( ₹5,000 + Delivery Charges ₹100 )</span></div>
+          <div class="card_back"><a href="#" class="step step-2" data-step="2" onclick="sendEvent('#delivery', 1)" style="display: inline;">&lt; Back to Delivery Details</a></div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="card_form"> 
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#cards" role="tab">CARDS</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#net" role="tab">NET BANKING</a> </li>
+          </ul>
+          
+          <!-- Tab panels -->
+          <div class="tab-content"> 
+            <!--Panel 1-->
+            <div class="tab-pane fade in active" id="cards" role="tabpanel">
+              <div id="second_nav">
+                <div class="new_card_box">
+				<div class="new_card">
+                  <div class="col-md-12">
+                    <div class="md-form">
+                      <input type="text" id="card1" class="form-control">
+                      <label for="card1" class="">Card Number</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="md-form">
+                      <input type="text" id="name1" class="form-control">
+                      <label for="name1" class="">Name on Card</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 expiry">Expiry Date</div>
+                  <div class="col-md-3 col-xs-3">
+                    <div class="md-form">
+                      <input type="text" id="mm" class="form-control">
+                      <label for="mm" class="">MM</label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-xs-3">
+                    <div class="md-form">
+                      <input type="text" id="yy" class="form-control">
+                      <label for="yy" class="">YY</label>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-xs-4">
+                    <div class="md-form">
+                      <input type="text" id="cvv" class="form-control">
+                      <label for="cvv" class="">CVV</label>
+                    </div>
+                  </div>
+				  
+				  <div class="clearfix"></div>
+				  </div>
+                </div>
+				  
+				  <div class="card_button"><button type="button" class="btn btn-primary"> CONTINUE TO PAY </button></div>
+				  <div class="clearfix"></div>
+              </div>
+            </div>
+            <!--/.Panel 1--> 
+            
+            <!--Panel 2-->
+            <div class="tab-pane fade" id="net" role="tabpanel">
+              <div class="net_banking">
+                <div class="col-lg-4 col-xs-4 col-lg-offset-1 col-xs-offset-1 bank active"><img src="img/sbi.png"></div>
+                <div class="col-lg-4 col-lg-offset-2 col-xs-4 col-xs-offset-2 bank"><img src="img/hdfc.png"></div>
+                <div class="col-lg-4 col-xs-4 col-lg-offset-1 col-xs-offset-1 bank"><img src="img/axis.png"></div>
+                <div class="col-lg-4 col-lg-offset-2 col-xs-offset-2 col-xs-4 bank"><img src="img/idbi.png"></div>
+                <div class="clearfix"></div>
+                <div class="banks_list">
+                  <select class="form-control">
+                    <option value="" disabled="" selected="">Select Bank</option>
+                    <option value="1">SBI</option>
+                    <option value="2">HDFC</option>
+                    <option value="3">Axis</option>
+                  </select>
+                </div>
+                <div class="card_button">
+                  <button type="button" class="btn btn-primary"> CONTINUE TO PAY </button>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <!--/.Panel 2--> 
+            
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#delivery', 2)" style="display: inline-block;"> CONTINUE </button>
+        <div class="row step step-1 sign_in_tt" data-step="1" style="display: block;"> <span>By proceeding ahead, you agree </span> <a href="#" onclick="sendEvent('#delivery', 4)">Terms &amp; Conditions</a> </div>
+      </div> --> 
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS --> 
+
+<!-- JQuery --> 
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
+
+<!-- Bootstrap tooltips --> 
+<script type="text/javascript" src="js/tether.min.js"></script> 
+
+<!-- Bootstrap core JavaScript --> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+
+<!-- MDB core JavaScript --> 
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+<!-- Chat Lib -->
+<script type="text/javascript" src="js/chat/quickblox.min.js"></script>
+
+<!-- Chat Javascript -->
+<script type="text/javascript" src="js/chat/chat_final.js"></script>
+
+<!-- Validators  -->
+<script type="text/javascript" src="js/validators/jquery_validator_lib.js"></script>
+<script type="text/javascript" src="js/validators/custom_validator.js"></script>
+
+<!-- Chat Controls -->
+
+<script>
+function openChatBox(){
+  $('#chat_box').addClass('animated bounceIn');
+  $('#chat_box').removeClass('type_hide');
+  $('#chat_message_box').removeClass('type_hide');
+}
+
+function closeChatBox(){
+  $('#chat_box').addClass('type_hide');
+}
+
+function minimiseChatBox(){
+  if($('#chat_box').hasClass('minimized')){
+    $('#chat_box').removeClass('minimized');
+    openChatBox();
+  } else {
+    $('#chat_message_box').addClass('type_hide');
+    $('#chat_box').addClass('minimized');
+  }
+}
+</script>
+
+<script>
+
+//signup user
+
+
+function loginAndSend(){
+
+  $('#chat_preloader').removeClass('type_hide');
+   $('#login-form-chat').addClass('type_hide');
+
+  //Do ajax call to server, login the user and login to chat
+  formData = $('#login-form-chat').serialize();
+
+  $.ajax({ 
+      url: 'https://httpbin.org/get',
+      data: formData,
+      type: 'get',
+      success: function(response) {
+        console.log(response);
+          chatClick();
+      },
+      error: function() {
+         
+      }
+   });
+}
+
+</script>
+
+<script>
+
+</script>
 
 </body>
-
-        </html>
+</html>

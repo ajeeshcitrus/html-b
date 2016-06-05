@@ -145,7 +145,7 @@ body {
 	overflow:none!important;
 }
 
-#delivery  label {
+.product  label {
 	color:#afafaf;
     font-weight: normal!important;
 	top: 2rem;
@@ -198,6 +198,10 @@ font-size: .7rem;
 	float:left;
 	font-size:14px;
 	padding:0 20px 10px 24px;
+}
+.pick_contact{
+	width:21px;
+	padding:0 10px 0 0;
 }
 .pick_location{
 	width:24px;
@@ -315,7 +319,7 @@ height:45px!important;
 .modal-body .row {
     margin-bottom:5px!important;
 }
-#delivery .ml_caption {
+.ml_caption {
     font-size:18px;
 	text-align:left;
 	padding:15px 0 0 0;
@@ -443,6 +447,7 @@ input, textarea {
 
 .sign_in_tt{
 padding: 20px 0 15px 0;
+	text-align:center;
 }
 .sign_in_form{
 width:210px;
@@ -465,8 +470,11 @@ margin-top:20px;
 margin-bottom:30px;
 }
 .delivery_form{
-width:100%;
-float:left;
+    width: 70%;
+    margin: 0 auto;
+	border-radius: 5px;
+	padding: 20px 0 0 0;
+    border: 1px solid #EAEAEA;
 }
 .section{
 	float:left;
@@ -679,9 +687,6 @@ padding:40px 0 0 0;
 	background-color:#27ae60!important
 }
 
-.new_card label {
-    color: #6e6e6e;
-}
 .tab-content{
 padding:10px 0 20px 0;
 }
@@ -754,12 +759,12 @@ padding:10px 0 20px 0!important;
 .bank{
 float:left;
 padding:12px 15px;
-margin: 0 20px 0 0;
+margin: 0 10px 0 0;
 }
 
 .bank img{
  text-align:center;
- width:72px;
+ width:61px;
 }
 .hdfc{
 background:url("../img/camera.png");
@@ -813,6 +818,23 @@ padding-top:30px;
 	border-radius: .50em;
 	padding: 25px !important;
 	background:#ffffff;
+}
+.product_close{
+	width:40px;
+	float:left;
+	position:absolute;
+	top:24px;
+	z-index:2;
+	right:10px;
+}
+.product_button{
+	float:left;
+	width:100%;
+	
+}
+.product_center{
+	margin:0 auto;
+	width:235px;
 }
 .product_slider {
     float: left;
@@ -1076,6 +1098,10 @@ padding:0 20px 0 0;
 }
 .chat_close_ic{
 	width:12px;
+	z-index:15;
+}
+.chat_close_ic:hover {
+    fill:#ccc;
 }
 .chat .conver{
 float:left;
@@ -1317,7 +1343,7 @@ height:6px;
 .description {
 	padding:0;
 }
-#delivery .ml_caption {
+.ml_caption {
     font-size: 13px!important;
 	font-weight:bold;
 	padding:0;
@@ -1387,6 +1413,7 @@ margin: 15px 0 10px 0;
 .sign_in_tt {
     padding: 10px 0 10px 0!important;
 	font-size:11px;
+	text-align:center;
 }
 .wallet_otp{
 	font-size:11px;
@@ -1522,7 +1549,7 @@ font-size: 14px!important;
     margin: 0 5px 0 0;
 }
 .net_banking img{
-    width:60px;
+    width:50px;
 }
 .nav-tabs {
     padding:5px 0 15px 0;
@@ -1546,5 +1573,11 @@ font-size: 14px!important;
 }
 .box-share {
     margin: 10px 10px 0 0;
+}
+.delivery_form {
+    width: 100%;
+    margin: none;
+    padding: 20px 0 0 0;
+    border: 1px solid #EAEAEA;
 }
 }

@@ -87,7 +87,7 @@ margin:0;
 	   }
 .carousel-indicators{	
 	    width: 100px;
-		left:104%;
+		left:108%;
 }
 .facebook{
 	width:30px;
@@ -126,7 +126,7 @@ margin:0;
     min-width: 100%;
 }
 .carousel-inner {
-    width: 70%;
+    width: 75%;
 }
 .carousel-control.right {
 right: 200px;
@@ -816,7 +816,7 @@ padding-top:30px;
 }
 .product_slider {
     float: left;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 40px;
 }
 .product_slider #slider {
 	width: 76%;

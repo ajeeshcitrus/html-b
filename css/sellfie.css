@@ -126,7 +126,8 @@ margin:0;
     min-width: 100%;
 }
 .carousel-inner {
-    width: 75%;
+    width: 85%;
+	height:350px;
 }
 .carousel-control.right {
 right: 110px;
@@ -851,7 +852,7 @@ padding-top:30px;
 	font-size: 28px;
 }
 .product_at {
-	font-size: 24px;
+	font-size: 22px;
 }
 .product_at span {
 	font-size: 14px;
@@ -876,7 +877,7 @@ padding-top:30px;
 .btn_box {
 	width: 100%;
 	float: left;
-	padding: 20px 0 0 0;
+	padding: 10px 0 0 0;
 }
 .buy_btn {
 	border-radius: 1.25em;
@@ -1196,7 +1197,7 @@ height:6px;
     float: left;
 }
 .profile_name{
-	padding:0 0 25px 15px; 
+	padding:0 0 20px 15px; 
 	line-height:50px;
 	float:left;
 	color:#404040;

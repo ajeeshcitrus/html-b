@@ -50,11 +50,50 @@ margin:0;
 	width:50px;
 	margin:0 auto;	
 }
+/*share*/
+.box-share {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right:0;
+  background:url("../img/share_bg.png");
+  border-radius:50px;
+  width: 40px;
+  height: 40px;
+  margin:15px 15px 0 0;
+  float:left;
+  overflow:hidden;
+  cursor:default;
+  transition: width 450ms;
+  -moz-transition: width 450ms;
+  -webkit-transition: width 450ms;
+  }
 
+.box-share:hover {
+    width: 160px;
+    }
+
+    .share-items {
+    width: 300px;
+    height: 50px;
+    float:right;
+    }
+	
+   .item {
+	   width:40px;
+	   float:right;
+	   text-align:center;
+	   padding:5px 0 0 0;
+	   }
 .carousel-indicators{	
 	    width: 100px;
 		left:117%;
 }
+.facebook{
+	width:30px;
+}
+
+/*Carousel*/
 .carousel-thumbnails .carousel-indicators img {    
     height: 100%;
 }
@@ -171,6 +210,10 @@ font-size: .7rem;
 .pick_comments{
 	width:25px;
 	padding:0 10px 0 0;
+}
+.location_name{
+	width: 25px;
+    padding: 0 4px 2px 10px;
 }
 .login_icon{
 	float:left;
@@ -851,16 +894,24 @@ padding-top:30px;
 	background: #1cbe61;
 }
 .secure {
-	font-size: 14px;
+	font-size: 12px;
 	float: left;
 	color: #afafaf;
 	width: 100%;
-	padding: 0 0 10px 45px;
 	margin: 25px 0 0 0;
-	background: url('../img/secure.png') no-repeat 0 5px;
 }
-.saved_card_box{
-	
+.secure_icon{
+	float:left;
+	width:35px;
+}
+.secure_icon img{
+	float:left;
+	width:25px;
+	padding: 2px 0 0 0;
+}
+.secure_text{
+	float:left;
+	width:87%;
 }
 .saved_card{
 	background:#2b2b2b;
@@ -1154,8 +1205,8 @@ height:6px;
 .profile_name span{
 	float:right;
 	padding:0 0 0 10px;
-	font-size:16px;
-	color:#6a6a6a!important;
+	font-size:14px;
+	color:#AFAFAF!important;
 }
 .message{
 	border:1px solid #27ae60;
@@ -1298,7 +1349,7 @@ margin:0;
 }
 .product_mg {
     font-size: 12px!important;
-	line-height:20px!important;
+	line-height:18px!important;
 	padding:15px 0 0 0;
 }
 .product_report {
@@ -1307,7 +1358,10 @@ margin:0;
 }
 .secure{
 font-size:12px!important;
-padding: 0 0 10px 33px;
+margin: 15px 0 10px 0;
+}
+.secure_text {
+	text-align:left;
 }
 .red_strip {
     padding: 15px 20px !important;
@@ -1487,5 +1541,8 @@ font-size: 14px!important;
 .pick_head {
     font-size: 13px;
 	font-weight:bold;
+}
+.box-share {
+    margin: 10px 10px 0 0;
 }
 }

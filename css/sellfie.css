@@ -819,13 +819,13 @@ padding-top:30px;
 	padding: 25px !important;
 	background:#ffffff;
 }
-.product_close{
-	width:40px;
-	float:left;
-	position:absolute;
-	top:24px;
-	z-index:2;
-	right:10px;
+.product_close {
+    width: 40px;
+    float: left;
+    position: absolute;
+    top: 92px;
+    z-index: 2;
+    right: 296px;
 }
 .product_button{
 	float:left;
@@ -1176,7 +1176,7 @@ height:6px;
 }
 .sellfie_logo {
 	float: left;
-	padding: 6px 0 0 0;
+	padding: 5px 0 5px 0;
 }
 .logo_icon{
 	height: 20px;

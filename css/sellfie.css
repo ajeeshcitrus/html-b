@@ -1611,4 +1611,10 @@ font-size: 14px!important;
     padding: 20px 0 0 0;
     border: 1px solid #EAEAEA;
 }
+.bank {
+    padding: 12px 10px;
+}
+.bank_last {
+    padding: 12px 8px;
+}
 }

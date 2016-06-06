@@ -20,6 +20,12 @@ a:hover {  color: #f70f0f;
 .md-form label {
 top: 2rem;
 left: 5px;
+font-size:.9rem;
+}
+.form-control {
+    margin-bottom: .1rem;
+	font-size: .9rem;
+	border-radius: 5px;
 }
 .slider {
 			overflow-y: hidden;
@@ -53,7 +59,7 @@ margin:0;
     border-bottom: 2px solid #f70f0f;
 }
 .nav-tabs .nav-link {
-    padding:10px 20px;
+    padding:5px 20px;
 }
 
 .circle{
@@ -156,15 +162,15 @@ body {
 }
 
 .product  label {
-	color:#afafaf;
+	color:#CCCCCC;
     font-weight: normal!important;
-	top: 2rem;
+	top: 1.7rem;
 	left: .3rem;
 }
 .card_form  label {
 	color:#afafaf;
     font-weight: normal!important;
-	top: 2rem;
+	top: 1.9rem;
 	left: .3rem;
 }
 .card_form .md-form label.active {
@@ -196,17 +202,17 @@ font-size: .7rem;
 }
 .pick_head{
 	float:left;
-	font-size:18px;
+	font-size:17px;
 	padding:0 0 7px 0;
 }
 .pick_text{
 	float:left;
-	font-size:14px;
-	padding:0 0 0 24px;
+	font-size:12px;
+	padding:0 0 0 26px;
 }
 .pick_ln_text{
 	float:left;
-	font-size:14px;
+	font-size:12px;
 	padding:0 20px 10px 24px;
 }
 .pick_contact{
@@ -330,9 +336,9 @@ height:45px!important;
     margin-bottom:5px!important;
 }
 .ml_caption {
-    font-size:18px;
+    font-size:17px;
 	text-align:left;
-	padding:15px 0 0 0;
+	padding:10px 0 0 0;
 }
 
 .modal-body .ml_sub {
@@ -414,10 +420,13 @@ font-size: 12px;
 
 input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
 /*   margin: 0 0 0px 0;*/
-   font-size: 1rem;
+   font-size: .9rem;
 }
 input, textarea {
     padding: 25px 0px 0px 5px !important;
+}
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
+    height: 1.5rem;
 }
 
 .input-field label {   
@@ -489,7 +498,7 @@ margin-bottom:30px;
 .section{
 	float:left;
 	width: 100%;
-	padding:0 30px 15px 30px;
+	padding:0 30px 20px 30px;
 }
 .wallet_box{
 width:387px;
@@ -620,7 +629,7 @@ text-align:center;
 .nav-tabs {
    border-bottom: none !important;
    background:#f5f5f5;
-   padding:15px 0;
+   padding:12px 0;
 }
 .card_form .nav-tabs > li.active > a {
 	background:#f5f5f5 url('../img/nav_red.png') no-repeat center 32px!important;
@@ -768,11 +777,19 @@ padding:10px 0 20px 0!important;
 
 .bank{
 float:left;
-padding:12px 15px;
+padding:12px 16px;
 margin: 0 10px 0 0;
 }
+.bank_last{
+float:left;
+padding:12px 17px;
+}
 
-.bank img{
+.bank img {
+ text-align:center;
+ width:61px;
+}
+.bank_last img {
  text-align:center;
  width:61px;
 }
@@ -785,6 +802,9 @@ padding:15px;
     width: 70%;
 }
 .bank:hover{
+background:#f5f5f5;
+}
+.bank_last:hover{
 background:#f5f5f5;
 }
 .net_banking .active{
@@ -1223,8 +1243,9 @@ height:6px;
  float:left;
  width:50px;
  height:50px;
-	background: url('../img/profile_pr.png') no-repeat center;
- /*background: #e0eae9;*/
+  background:#e0eae9 url('../img/contact.svg') no-repeat center; 
+  background-size: 15px;
+  fill: #333 !IMPORTANT;
  overflow: hidden;
  border-radius: 50px;
 }

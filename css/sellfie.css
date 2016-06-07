@@ -3,6 +3,8 @@ a {  color: #666;
 a:hover {  color: #f70f0f;
 }
 
+
+
 @media only screen and (min-width: 993px)
 {.container {
     width: 76%!important;

@@ -22,6 +22,11 @@ top: 2rem;
 left: 5px;
 font-size:.9rem;
 }
+.error_red {
+    color: red;
+    font-size: 12px;
+    float: left;
+}
 .form-control {
     margin-bottom: .1rem;
 	font-size: .9rem;
@@ -866,6 +871,7 @@ padding-top:30px;
 	margin:0 auto;
 	width:235px;
 }
+
 .product_slider {
     float: left;
     padding: 0 0 0 40px;
@@ -1267,6 +1273,11 @@ height:6px;
 	font-size:14px;
 	color:#AFAFAF!important;
 }
+.divider_name{
+	float:left;
+	padding:0;
+	margin:0;	
+}
 .message{
 	border:1px solid #27ae60;
 	float:right;
@@ -1340,6 +1351,11 @@ height:6px;
 	.page_gap {
     margin: 0px;
 }
+.product_head{
+	float:left;
+	padding:15px 15px 0 15px!important;
+	width:100%;
+}
 	.product_slider {
     float: left;
 	padding:15px !important;
@@ -1347,9 +1363,20 @@ height:6px;
 .profile_name {
     font-size: 14px;
 	padding: 0 0 0 15px;
+	line-height:23px;
 }
 .profile_name span {
     font-size: 11px;
+    float: left;
+    width: 100%;
+	padding:0;
+}
+.divider_name{
+	display:none;	
+}
+.location_name {
+    width: 14px;
+    padding: 0 4px 2px 0px;
 }
 .message span{
 	display:none;

@@ -1109,8 +1109,8 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 bottom:0px;
 position:absolute;
 float:left;
-width:100%;
-padding:0 5px 5px 5px;
+width:98%;
+margin:0 5px 5px 5px;
 border:1px solid #ccc;
 background:#fff;
 }

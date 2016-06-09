@@ -49,7 +49,7 @@
 <div class="container main-content">
   <div id="preloader-container">
 
-    <div class="chat type_hide" id="chat_box">
+    <div class="chat chat_big type_hide" id="chat_box">
       <div class="title">
         <div class="top"> 
           <!--<div class="hangburger"><img class="hangburger_ic" src="img/hangburger.svg"></img></div>-->
@@ -60,48 +60,32 @@
           <div class="minus"><img class="minus_ic" src="img/minus.svg"></img></div>
           </a> </div>
       </div>
-      <div class="type" id="chat_message_box">
-        
+	  
+      <div class="type_bubble" id="chat_message_box">      
 
-			
-    			<div class="circle type_hide" id="chat_preloader">
-    			  <div class="preloader-wrapper active">
-    			 <div class="preloader-wrapper active">
-    			 <div class="preloader-wrapper active">
-    		   <div class="preloader-wrapper active">
-    			<div class="spinner-layer spinner-blue-only">
-    			  <div class="circle-clipper left">
-    				<div class="circle"></div>
-    			  </div><div class="gap-patch">
-    				<div class="circle"></div>
-    			  </div><div class="circle-clipper right">
-    				<div class="circle"></div>
-    			  </div>
-    			</div>
-    		  </div>
-    		  </div>
-    		  </div>
-    		  </div>
-    		  </div>
+		<div class="chat_sign">	    			
+		<div class="chat_sign_text">
+		Lorem Ipsum is simply dummy text of the printing and typese tting industry.
+		</div>  
 	  <form id="login-form-chat">
         <div class="col-md-12">
-          <div class="md-form"> <!-- Pree pree -->
-            <input type="text" id="chat_name" class="form-control validate invalid">
-            <label for="name" data-error="wrong" class="active">Name</label>
-          </div>
-        </div>
+                  <div class="md-form"> 
+                    <input type="text" name="chat_name" id="chat_name" class="form-control">
+                    <label for="chat_name" class="">Enter your name</label>
+                  </div>
+                </div>
         <div class="col-md-12">
-          <div class="md-form"> <!-- Pree pree -->
-            <input type="text" id="chat_mob" class="form-control">
-            <label for="mob" class="">Mobile Number</label>
-          </div>
-        </div>
+                  <div class="md-form">
+                    <input type="tel" maxlength="10" name="chat_mob" id="chat_mob" class="form-control">
+                    <label for="chat_mob" class="">Enter your mobile number</label>
+                  </div>
+                </div>
         <div class="col-md-12">
-          <div class="md-form"> <!-- Pree pree -->
-            <input type="text" id="chat_message" class="form-control">
-            <label for="message" class="">Type your message</label>
-          </div>
-        </div>
+                  <div class="md-form">
+                    <input type="tel" maxlength="10" name="type2" id="chat_mob" class="form-control">
+                    <label for="type2" class="">Type your message</label>
+                  </div>
+                </div>
       </div>
       <a onclick="loginAndSend();" id="login_send_btn">
       <div class="bu">SEND MESSAGE</div>
@@ -117,6 +101,8 @@
       <div class="bun send_message">SEND</div>
      </div>
     </form>
+	</div>
+	
 	  </div>
 
 	  <!-- Product main card -->
@@ -366,6 +352,7 @@
 									  <div class="clearfix"></div>
 								  </div>
 								  <div class="banks_list">
+								  
 									  <select class="form-control">
 										  <option value="" disabled="" selected="">Select Bank</option>
 										  <option value="1">SBI</option>

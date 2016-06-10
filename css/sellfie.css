@@ -578,11 +578,12 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	width: 100%;
 }
 
-.chat_dots{
-	float:left;
-	padding:10px 0 25px 0;
-	position:absolute;
-	bottom:0;
+.chat_dots {
+    float: left;
+    width: 120px;
+    padding: 10px 0 35px 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -1064,18 +1065,16 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .chat {
-	background: #f2efef;
-	width: 400px;
-	position: fixed;
-	padding: 51px 0 69px 0;
-	bottom: 0px;
-	height: auto;
-	right: 0px;
-	z-index: 700;
-/ border: 1px solid #c4c4c4; /
--webkit-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
-	-moz-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
-	box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+    background: #f2efef;
+    width: 400px;
+    position: fixed;
+    padding: 0px 0 133px 0;
+    bottom: 0px;
+    height: auto;
+    right: 0px;
+    z-index: 700;
+    -moz-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+    box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
 }
 .chat_login{
 	float:left;
@@ -1084,6 +1083,39 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 }
 .chat_big{
 	top:0;
+}
+.chat_small {
+    height: 60px;
+}
+.small{
+	float:left;
+}
+.small .name_bubble {
+    padding: 0;
+}
+.small .noti{
+	width:20px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	border-radius:20px;
+	background:red;
+	font-size:14px;
+	color:#fff;
+	float:left;
+	margin:0 7px 0 0;
+}
+.small .chat {
+    background: #f2efef;
+    width: 400px;
+    position: fixed;
+    padding: 0px;
+    bottom: 0px;
+    height: auto;
+    right: 0px;
+    z-index: 700;
+    -moz-box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
+    box-shadow: -2px 3px 12px 0px rgba(50, 50, 50, 0.41);
 }
 .chat .bu {
 	bottom: 0px;
@@ -1104,6 +1136,10 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	height: 100% !important;
 	overflow-y: scroll;
 	padding: 15px 15px 15px 10px;
+}
+.chat .box{
+	float:left;
+	width:100%;
 }
 .chat .send{
 bottom:0px;
@@ -1141,14 +1177,11 @@ background:#fff;
 	float:left;
 }
 .chat .send .bun {
-	width: 15%;
-	float: right;
-	text-align: center;
-	padding: 27px 10px 0 10px;
-	cursor: pointer;
+	display:none;
 }
 .chat .send .bu:hover{
 	color:#27ae60;
+
 }
 
 .chat .title{
@@ -1157,9 +1190,9 @@ background:#fff;
 	background:#fff;
 	padding:12px 20px;
 	font-size:18px;
-	position:absolute;
+	/*position:absolute;*/
 	z-index:700;
-	top:0;
+	/*top:0;*/
 	-webkit-box-shadow: 0px 5px 5px 0px #cfcccc;
 	-moz-box-shadow: 0px 5px 5px 0px #cfcccc;
 	box-shadow: 0px 5px 5px 0px #cfcccc;
@@ -1217,12 +1250,12 @@ background:#fff;
 	width:100%;
 }
 
-.chat_one span{
-	float:left;
-	width:6%;
-	padding:0 20px 0 0;
-	min-height:80px;
-	background:url('../img/bubble_lt.png') no-repeat right 10px !important;
+.chat_one span {
+    float: left;
+    width: 6%;
+    padding: 0 20px 0 0;
+    min-height: 42px;
+    background: url('../img/bubble_lt.png') no-repeat right 10px !important;
 }
 .chat .time{
 	float:left;
@@ -1238,13 +1271,14 @@ background:#fff;
 	color:#404040;
 	padding:10px;
 	border-radius:.50em;
+	word-wrap: break-word;
 	background:#dee8e1!important;
 }
 
 .chat_two span{
 	float:right;
 	width:3%;
-	min-height:80px;
+	min-height:42px;
 	background:url('../img/bubble_rt.png') no-repeat left 10px !important;
 }
 .chat_two .time{
@@ -1261,6 +1295,7 @@ background:#fff;
 	padding:10px;
 	margin-bottom:10px;
 	border-radius:.50em;
+	word-wrap: break-word;
 	background:#7bcc9d !important;
 }
 .chat_lr{
@@ -1650,17 +1685,28 @@ background:#fff;
 		overflow:hidden;
 		position: none;
 	}
-	.chat .title{
-		position:fixed;
-	}
 	.chat .bu {
 		/*position: fixed;*/
 		border: none;
 	}
+	.chat .send .bun {
+	width: 24%;
+	display:block;
+	float: right;
+	text-align: center;
+	padding: 22px 10px 0 10px;
+	cursor: pointer;
+}
+.chat .send {
+    width: 98%;
+}
 	.chat .type {
 		width: 99%;
 		height:200px;
 		margin-bottom:80px;
+	}
+	.chat .send .tt {
+		width: 76%;
 	}
 	.description {
 		text-align:center;

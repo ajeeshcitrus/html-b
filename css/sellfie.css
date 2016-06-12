@@ -195,9 +195,108 @@ body {
 .md-form, .md-form .btn {
 	margin-bottom: 0rem;
 }
-/*#delivery img{
-width:auto!important;
-}*/
+
+/* success */
+	.su_main{
+		margin:0 auto;
+		width:500px;
+	}
+	.su_success{		
+		float:left;
+		width:100%;
+		height:70px;
+		background:url('../img/success.png') center no-repeat;
+	}
+        .su_failed{		
+		float:left;
+		width:100%;
+		height:70px;
+		background:url('../img/failed.png') center no-repeat;
+	}
+	.su_title{		
+		text-align:center;
+		font-size:18px;	
+		float:left;
+		width:100%;
+		padding-bottom:25px;
+	}
+	.su_image{
+		width:200px;
+		border:1px solid #ccc;
+		float:left;
+		margin:0 40px 30px 0;
+
+	}
+        .su_image img {
+            width: 100%;
+            float: left;
+        }
+	.su_box{		
+		width:50%;
+		float:left;
+	}
+	.su_labal{
+		font-size:12px;
+		color:#929292;
+		float:left;	
+		width:100%;		
+	}
+	.su_name{
+		font-size:20px;
+		color:#010101;
+		float:left;		
+		width:100%;
+	}
+	.su_amount{
+		font-size:20px;
+		color:#010101;	
+		float:left;
+		width:100%;
+	}
+	.su_paid{
+		float:left;
+		width:100%;
+		font-size:16px;
+		color:#404040;
+	}
+	.su_type{
+		float:left;
+		width:100%;
+		padding-top:25px;
+		font-size:16px;
+		color:#404040;
+	}
+	.su_labal_text{
+		margin:20px 0 0 0;
+		font-size:12px;
+		color:#929292;
+		float:left;	
+		width:100%;		
+	}
+	.su_text{
+		float:left;
+		width:100%;
+		padding-top:8px;
+		font-size:16px;
+		color:#404040;
+	}
+	.su_button{
+		float:left;
+		width:100%;
+		padding:25px 0 0 0;
+		text-align:center!important;
+		
+	}
+	@media only screen and (max-width: 360px){
+		.su_main{
+		margin:0 auto;
+		width:300px;
+	}
+		
+	}
+
+/* End success */
+
 #delivery .md-form, .md-form .btn {
 	margin-bottom: 0rem;
 }
@@ -540,10 +639,9 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	text-align: center;
 }
 
-// Arrow left - always visible
-				#carousel .flexslider:hover .flex-direction-nav .flex-prev {
-					left: 89% !important;
-				}
+#carousel .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 89% !important;
+}
 #carousel .flex-prev {
 	left: 30% !important;
 	top: 265px !important;
@@ -581,7 +679,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 .chat_dots {
     float: left;
     width: 120px;
-    padding: 10px 0 35px 10px;
+    padding: 10px 0 72px 10px;
     position: absolute;
     bottom: 0;
 }
@@ -775,13 +873,17 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	border-radius:0 0 .50em .50em;
 }
 .camera{
-	width:40px;
+	width:35px;
 	float:right;
 	font-size:15px;
 	padding-right: 12px;
-	cursor:pointer;
-	background: url("../img/camera.png") no-repeat 20px 1px;
+	background: url("../img/like.svg") no-repeat 15px;
+	background-size:20px;
 }
+
+
+
+
 .price {
 	float:left;
 	width:100%;
@@ -864,6 +966,9 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	padding-top:30px;
 }
 
+.btn-primary_light {
+    background-color: #92f5bb!important;
+}
 /*Old CSS*/
 
 .footer_gap {
@@ -945,9 +1050,10 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	color: #afafaf;
 }
 .product_mg {
-	font-size: 14px;
-	line-height: 20px;
-	text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
+   min-height: 62px;
+    text-align: justify;
 }
 .product_report {
 	width:105px;
@@ -981,11 +1087,15 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	background: #1cbe61;
 }
 .secure {
-	font-size: 12px;
+	font-size: 10px;
 	float: left;
 	color: #afafaf;
 	width: 100%;
 	margin: 25px 0 0 0;
+}
+.dots{
+    border-top: 2px dotted #f5f5f5;
+    border-bottom: 2px dotted #f5f5f5;
 }
 .secure_icon{
 	float:left;
@@ -993,7 +1103,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 }
 .secure_icon img{
 	float:left;
-	width:25px;
+	width:22px;
 	padding: 2px 0 0 0;
 }
 .secure_text{
@@ -1035,32 +1145,32 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 	padding:0px 0 0 0;
 }
 .visa{
-	background: #fff url("../img/visa.svg") no-repeat right;
+	background: #fff url("../img/visa.svg") no-repeat right 21px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .mastercard{
-	background: #fff url("../img/mastercard.svg") no-repeat right;
+	background: #fff url("../img/mastercard.svg") no-repeat right 17px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .maestro{
-	background: #fff url("../img/maestro.svg") no-repeat right;
+	background: #fff url("../img/maestro.svg") no-repeat right 17px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .amex{
-	background: #fff url("../img/amex.svg") no-repeat right;
+	background: #fff url("../img/amex.svg") no-repeat right 21px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .diners{
-	background: #fff url("../img/diners.svg") no-repeat right;
+	background: #fff url("../img/diners.svg") no-repeat right 21px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
 .rupay{
-	background: #fff url("../img/rupay.png") no-repeat right;
+	background: #fff url("../img/rupay.png") no-repeat right 21px;
 	background-size: 35px;
 	/*background: url('../img/visa.png') no-repeat -85px 15px;*/
 }
@@ -1088,26 +1198,25 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
     height: 60px;
 }
 .small{
-	float:left;
+ float:left;
 }
 .small .name_bubble {
     padding: 0;
 }
 .small .noti{
-	width:20px;
-	height:20px;
-	line-height:20px;
-	text-align:center;
-	border-radius:20px;
-	background:red;
-	font-size:14px;
-	color:#fff;
-	float:left;
-	margin:0 7px 0 0;
+ width:20px;
+ height:20px;
+ line-height:20px;
+ text-align:center;
+ border-radius:20px;
+ background:red;
+ font-size:14px;
+ color:#fff;
+ float:left;
+ margin:0 7px 0 0;
 }
 .small .chat {
     background: #f2efef;
-    width: 400px;
     position: fixed;
     padding: 0px;
     bottom: 0px;
@@ -1132,11 +1241,12 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 .type_hide{
 	display:none;
 }
-.type_bubble {
-	height: 100% !important;
-	overflow-y: scroll;
-	padding: 15px 15px 15px 10px;
+ .type_bubble {
+    height: 100% !important;
+    overflow-y: scroll;
+    padding: 15px 15px 15px 10px;
 }
+
 .chat .box{
 	float:left;
 	width:100%;
@@ -1175,27 +1285,34 @@ background:#fff;
 .chat .send .text{
 	width:85%;
 	float:left;
+        
 }
 .chat .send .bun {
-	display:none;
+	width: 15%;
+	float: right;
+	text-align: center;
+	padding: 27px 10px 0 10px;
+	cursor: pointer;
+        display:none;
+        
 }
+
 .chat .send .bu:hover{
 	color:#27ae60;
-
 }
 
-.chat .title{
-	width:100%;
-	float:left;
-	background:#fff;
-	padding:12px 20px;
-	font-size:18px;
-	/*position:absolute;*/
-	z-index:700;
-	/*top:0;*/
-	-webkit-box-shadow: 0px 5px 5px 0px #cfcccc;
-	-moz-box-shadow: 0px 5px 5px 0px #cfcccc;
-	box-shadow: 0px 5px 5px 0px #cfcccc;
+.chat .title {
+    width: 100%;
+    float: left;
+    background: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    / position: absolute; /
+    z-index: 700;
+    / top: 0; /
+    -webkit-box-shadow: 0px 5px 5px 0px #cfcccc;
+    -moz-box-shadow: 0px 5px 5px 0px #cfcccc;
+    box-shadow: 0px 5px 5px 0px #cfcccc;
 }
 
 .chat .top{
@@ -1257,35 +1374,35 @@ background:#fff;
     min-height: 42px;
     background: url('../img/bubble_lt.png') no-repeat right 10px !important;
 }
-.chat .time{
-	float:left;
-	font-size:12px;
-	color:#5b5b5b;
-	padding:0 0 0 10px;
+.chat .time {
+    float: left;
+    font-size: 12px;
+    color: #5b5b5b;
+    padding: 0 0 15px 23px;
 }
-.chat_one p{
-	float:left;
-	width:80%;
-	margin-bottom:10px;
-	font-size:15px;
-	color:#404040;
-	padding:10px;
-	border-radius:.50em;
-	word-wrap: break-word;
-	background:#dee8e1!important;
+.chat_one p {
+    float: left;
+    width: 80%;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #404040;
+    padding: 10px;
+    border-radius: .50em;
+    background: #dee8e1!important;
+    word-wrap: break-word;
 }
 
 .chat_two span{
 	float:right;
 	width:3%;
-	min-height:42px;
+	min-height: 42px;
 	background:url('../img/bubble_rt.png') no-repeat left 10px !important;
 }
-.chat_two .time{
-	float:right;
-	font-size:12px;
-	color:#5b5b5b;
-	padding:0 0 0 10px;
+.chat_two .time {
+    float: right;
+    font-size: 12px;
+    color: #5b5b5b;
+    /*padding: 0 0 15px 10px;*/
 }
 .chat_two p{
 	float:right;
@@ -1293,10 +1410,10 @@ background:#fff;
 	font-size:15px;
 	color:#fff;
 	padding:10px;
-	margin-bottom:10px;
+	margin-bottom:5px;
 	border-radius:.50em;
-	word-wrap: break-word;
 	background:#7bcc9d !important;
+        word-wrap: break-word;
 }
 .chat_lr{
 	height:6px;
@@ -1320,11 +1437,11 @@ background:#fff;
 }
 .sellfie_logo {
 	float: left;
+	width:75px;
 	padding: 5px 0 5px 0;
 }
 .logo_icon{
 	height: 20px;
-	margin:0 10px 0 0;
 }
 .red_strip ul {
 	float: right;
@@ -1344,7 +1461,7 @@ background:#fff;
 	text-decoration: none;
 }
 .caption {
-	padding: 50px 0;
+	padding: 40px 0;
 	color: #404040;
 	font-size: 18px;
 	text-align: center;
@@ -1381,6 +1498,7 @@ background:#fff;
 	font-size:14px;
 	color:#AFAFAF!important;
 }
+
 .divider_name{
 	float:left;
 	padding:0;
@@ -1404,7 +1522,6 @@ background:#fff;
 	margin: 0px !Important;
 }
 
-
 .products {
 	border: 1px solid #ebebeb;
 	border-top: 1px solid #ffffff !Important;
@@ -1413,8 +1530,15 @@ background:#fff;
 	box-shadow: 0px 5px 10px #ccc;
 }
 
+.main-success {
+    max-width: 600px;
+}
+
 .main-content {
 	max-width: 750px;
+}
+.index-content {
+	max-width: 1020px;
 }
 #container .inner {
 	margin-left: -20px;
@@ -1429,6 +1553,67 @@ background:#fff;
 .portfolio .span4 {
 	width: 100%;
 	margin:0;
+}
+/*index*/
+
+.page_top{
+	float:left;
+	height:70px;
+	width:100%;
+}
+
+.profile_index {
+ overflow: hidden;
+ border-radius: 0.5em 0 0 0.5em;
+ background:#e0eae9 url("../img/profile_avatar.svg") no-repeat center;
+}
+
+.store {
+ display: -webkit-box;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: -webkit-flex;
+ display: flex; 
+ border-radius:.50em;
+ }
+/*.store img {
+ width: 100%;
+}*/
+
+.store .profile_index img {
+ position: absolute;
+ top: 0;
+ border-radius: 0.5em 0 0 .5em;
+}
+.store .banner img {
+ border-radius: 0 0.5em 0.5em 0;
+}
+.store .banner {
+	border-left:10px solid #ffffff;
+	min-height:270px;
+ background:#a0d6b7 url("../img/banner_avatar.svg") no-repeat center;
+ background-size:570px;
+ border-radius:0 0.5em .5em 0;
+}
+.hi{
+width:100%;
+font-size:20px;
+padding:15px 0 15px 20px;
+color:#fff;
+border-radius:0 0 .50em 0;
+background:url('../img/black_bg.png');
+bottom:0;
+position:absolute;
+}
+.hi span{
+float:right;
+font-size:16px;
+padding:0 20px 0 0;
+text-align:right;
+}
+.hi_icon {
+    width: 18px;
+    padding: 0 0 0 4px;
 }
 
 @media screen and (max-width: 639px){
@@ -1457,7 +1642,13 @@ background:#fff;
 		right: 53px;
 	}
 	.page_gap {
-		margin: 0px;
+		margin:60px 0 0 0;
+	}
+	.page_top {
+    height: 60px;
+}
+	.index-content {
+    max-width: 93%;
 	}
 	.product_head{
 		float:left;
@@ -1468,11 +1659,18 @@ background:#fff;
 		float: left;
 		padding:15px !important;
 	}
+	.profile_index{
+		background-size:35px;
+	}
+	.profile {
+    width: 45px;
+    height: 45px;
+	}
 	.profile_name {
 		font-size: 14px;
-		padding: 0 0 0 15px;
+		padding: 0 0 0 10px;
 		line-height:23px;
-		width: 50%;
+		width: 48%;
 	}
 	.profile_name span {
 		font-size: 11px;
@@ -1480,6 +1678,14 @@ background:#fff;
 		width: 100%;
 		padding:0;
 	}
+	.store .banner {
+	min-height:75px;
+	background-size:150px;
+	}
+	.store .banner img {
+    border-radius: 0 0.5em 0.5em 0;
+	}
+	
 	.divider_name{
 		display:none;
 	}
@@ -1494,7 +1700,7 @@ background:#fff;
 		margin: 0 5px 0 0!important;
 	}
 	.message {
-		padding: 0 12px 0 12px;
+		padding: 0 10px 0 10px;
 		line-height: 35px;
 	}
 	.container {
@@ -1516,11 +1722,9 @@ background:#fff;
 		font-weight:bold;
 		padding:0;
 	}
-	body {
-		padding-top: 80px;
-	}
 	.caption {
-		font-size: 14px!important;
+		font-size: 12px!important;
+		padding: 18px 0;
 	}
 
 	.modal-header h2 {
@@ -1560,15 +1764,18 @@ background:#fff;
 		text-align:left;
 	}
 	.red_strip {
-		padding: 15px 20px !important;
+		padding: 10px 20px !important;
 	}
 	.hi {
-		font-size: 15px;
-		padding: 10px 0 10px 15px;
+		font-size: 12px;
+		padding: 6px 0 6px 10px;
 	}
 	.hi span {
-		margin: 0 15px 0 0;
-		font-size:14px;
+		font-size:10px;
+		padding: 0 10px 0 0;
+	}
+	.hi_icon {
+    width: 14px;
 	}
 	.modal-body .ml_sub {
 		font-size: 14px!important;
@@ -1641,7 +1848,7 @@ background:#fff;
 	.camera {
 		width: 35px;
 		font-size: 12px;
-		background: url("../img/camera.png") no-repeat 14px 1px;
+		background: url("../img/like.svg") no-repeat 14px 1px;
 		line-height: 22px;
 	}
 	.price span {
@@ -1677,7 +1884,7 @@ background:#fff;
 	.chat{
 		width: 100%;
 		bottom: none;
-		top:0;
+		/*top:0;*/
 		right:none;
 		height:auto;
 		z-index: 700;
@@ -1689,24 +1896,10 @@ background:#fff;
 		/*position: fixed;*/
 		border: none;
 	}
-	.chat .send .bun {
-	width: 24%;
-	display:block;
-	float: right;
-	text-align: center;
-	padding: 22px 10px 0 10px;
-	cursor: pointer;
-}
-.chat .send {
-    width: 98%;
-}
 	.chat .type {
 		width: 99%;
 		height:200px;
 		margin-bottom:80px;
-	}
-	.chat .send .tt {
-		width: 76%;
 	}
 	.description {
 		text-align:center;
@@ -1769,4 +1962,41 @@ background:#fff;
 	.bank_last {
 		padding: 12px 8px;
 	}
+        .chat .send .bun {
+            width: 15%;
+            display:block;
+            float: right;
+            text-align: center;
+            padding: 22px 10px 0 10px;
+            cursor: pointer;
+           }
+        .chat .send .tt {
+            width: 76%;
+        }
+        .chat .send {
+            width: 98%;
+        }
+        .su_image {
+            width: 100%;
+            margin: 0 40px 15px 0;
+        }
+        .su_main {
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 15px 10px 15px;
+        }
+        .su_box {
+            width: 100%;
+            float: left;
+        }
+        .su_type {
+        padding-top: 10px;
+       }
+       .su_text {
+            font-size: 12px;
+        }
+        .su_title {
+            font-size: 16px;
+            padding-bottom: 12px;
+        }
 }

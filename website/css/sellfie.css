@@ -1,0 +1,228 @@
+body{
+	font-family: 'Roboto', sans-serif;	
+	font-weight:100;
+}
+.collect{
+	position: absolute;
+	float:left;
+	left: 25%;
+	width:400px;
+	top: 35%;
+}
+.collect img{	
+	width:160px;
+	height:auto;
+	float:left;
+	padding-right:20px;
+}
+.container3{	
+	left:40%!important;
+}
+.features_head{
+	float:left;
+	width:100%;
+	text-align:left;
+	color:#404040;
+	font-size:40px;
+	line-height: 40px;
+	padding:0 0 20px 0;
+}
+.features_box{
+	float:left;
+	width:330px;
+	padding:40px 0 0 0;
+}
+.features_box_2{
+	float:left;
+	width:330px;
+	padding:40px 0 0 80px;
+}
+.features_cap{
+	float:left;
+	font-size:30px;
+	width:100%;
+	text-align:left;
+	line-height: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:normal;
+}
+.features_f1{
+	float:left;
+	width:40px;
+	padding:0 10px 0 0;
+}
+.features_f2{
+	float:left;
+	width:20px;
+	padding:0 10px 0 0;
+}
+.features_f3{
+	float:left;
+	width:32px;
+	padding:0 10px 0 0;
+}
+.features_f4{
+	float:left;
+	width:30px;
+	padding:0 10px 0 0;
+}
+.features_text{
+	float:left;
+	width:100%;
+	font-size:15px;
+	text-align:left;
+	line-height:20px;
+	padding:15px 0 0 0;
+}
+#part-home .screen:nth-child(5) {
+    background: url('../img/slide5_bg.jpg') no-repeat;
+	background-size:100%;
+    z-index: 2;
+}
+#part-home .screen:nth-child(5) .content {
+    z-index: 10;
+    overflow: hidden;
+    min-width: 1000px;
+	height:100%;
+    box-sizing: border-box;
+    padding: 0;
+    top: 50%;
+}
+#part-home .screen:nth-child(6) {
+	background:#e54747;
+}
+#part-home .screen:nth-child(6) .content {
+    z-index: 11;
+    overflow: hidden;
+    min-width: 100%;
+	height:100%;
+    box-sizing: border-box;
+    padding: 0;
+    top: 50%;
+}
+.get_start{
+	float:left;
+	padding:200px 0 0 0;
+	width:300px;
+	color:#fff;
+}
+.get_start_head{
+	float:left;
+	width:100%;
+	font-size:40px;
+	text-align:left;
+}
+.get_start_text{
+	float:left;
+	font-size:17px;
+	padding:10px 0 0 0;
+	text-align:left;
+}
+.get_start_dd{
+	float:left;
+	padding:20px 0 0 0;
+}
+.get_start_dd a{
+	color:#fff;
+}
+.get_start_dd a:hover{
+	color:#f70f0f;
+}
+.get_start_dd span{
+	float:right;
+	line-height:90px;
+}
+.yellow{	
+	width:350px;
+	background:#fbf55e;
+	padding:55px;
+	position:absolute;
+	bottom:30px;
+	right:100px;
+}
+.yellow_cap{
+	float:left;
+	font-size:36px;
+	width:100%;
+	text-align:left;
+	padding:0 0 10px 0;
+}
+.yellow_text{
+	float:left;
+	font-size:16px;
+	width:100%;
+	text-align:left;
+}
+.sell{
+	float:left;
+	text-align:left;
+	color:#fff;
+	font-size:45px;
+	padding:90px 0 20px 65px;
+}
+ 
+    .wrap {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+    .box {
+      float: left;
+      position: relative;
+      width: 33.3%;
+      padding-bottom: 20%;
+    }
+    .boxInner {
+      position: absolute;      
+      overflow: hidden;
+    }
+    .boxInner img {
+      width: 100%;
+    }
+    .boxInner .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -50px;
+      background: #000;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      /*padding: 10px;*/
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px) {
+      /* Smartphone view: 1 tile */
+      .box {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+      /* Tablet view: 2 tiles */
+      .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+      /* Small desktop / ipad view: 3 tiles */
+      .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+      }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+      /* Medium desktop: 4 tiles */
+      .box {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }

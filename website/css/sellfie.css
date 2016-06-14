@@ -1,6 +1,12 @@
 body{
-	font-family: 'Roboto', sans-serif;	
-	font-weight:100;
+	font-family: 'Roboto', sans-serif;
+}
+.screens-nav {
+    z-index: 11;
+}
+.main-header>a {
+    height: 50px;
+    width: 170px;
 }
 .collect{
 	position: absolute;
@@ -23,9 +29,15 @@ body{
 	width:100%;
 	text-align:left;
 	color:#404040;
-	font-size:40px;
-	line-height: 40px;
+	font-size:45px;
+	line-height: 45px;
 	padding:0 0 20px 0;
+	font-weight:300;
+}
+.headings{
+	font-size:45px;
+	line-height: 45px;
+	font-weight:100;
 }
 .features_box{
 	float:left;
@@ -44,7 +56,7 @@ body{
 	text-align:left;
 	line-height: 30px;
 	font-family: 'Roboto', sans-serif;
-	font-weight:normal;
+	font-weight:400;
 }
 .features_f1{
 	float:left;
@@ -109,14 +121,16 @@ body{
 .get_start_head{
 	float:left;
 	width:100%;
-	font-size:40px;
-	text-align:left;
+	font-size:45px;
+	text-align:left;	
+	font-weight:100;
 }
 .get_start_text{
 	float:left;
 	font-size:17px;
 	padding:10px 0 0 0;
 	text-align:left;
+	font-weight:300;
 }
 .get_start_dd{
 	float:left;
@@ -142,87 +156,141 @@ body{
 }
 .yellow_cap{
 	float:left;
-	font-size:36px;
+	font-size:45px;
 	width:100%;
 	text-align:left;
 	padding:0 0 10px 0;
+	font-weight:100;
 }
 .yellow_text{
 	float:left;
 	font-size:16px;
 	width:100%;
 	text-align:left;
+	font-weight:300;
 }
 .sell{
 	float:left;
 	text-align:left;
 	color:#fff;
-	font-size:45px;
-	padding:90px 0 20px 65px;
+	font-size:42px;
+	padding:100px 0 20px 65px;
 }
+ /*images*/
  
-    .wrap {
-    float: left;
-    width: 100%;
-    overflow: hidden;
+ .thumb_images{
+	 float:left;
+	 width:100%;
+	 position:absolute;
+	 bottom:0;
+	 background:#000;
+ }
+ #rig {
+    max-width:100%;
+    margin:0 auto; /*center aligned*/
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
 }
-    .box {
-      float: left;
-      position: relative;
-      width: 33.3%;
-      padding-bottom: 20%;
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:33.33%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.70) url(img/link.png) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:26px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:normal!important;
+    top:50%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+	font-weight:normal;
+}
+.see_more{
+	float:left;
+	width:100%;
+	font-size:20px;
+	text-transform: capitalize;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width:33.33%;
     }
-    .boxInner {
-      position: absolute;      
-      overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
     }
-    .boxInner img {
-      width: 100%;
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
     }
-    .boxInner .titleBox {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin-bottom: -50px;
-      background: #000;
-      background: rgba(0, 0, 0, 0.5);
-      color: #FFF;
-      /*padding: 10px;*/
-      text-align: center;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
-    }
-    body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
-      margin-bottom: 0;
-    }
-    @media only screen and (max-width : 480px) {
-      /* Smartphone view: 1 tile */
-      .box {
-        width: 100%;
-        padding-bottom: 100%;
-      }
-    }
-    @media only screen and (max-width : 650px) and (min-width : 481px) {
-      /* Tablet view: 2 tiles */
-      .box {
-        width: 50%;
-        padding-bottom: 50%;
-      }
-    }
-    @media only screen and (max-width : 1050px) and (min-width : 651px) {
-      /* Small desktop / ipad view: 3 tiles */
-      .box {
-        width: 33.3%;
-        padding-bottom: 33.3%;
-      }
-    }
-    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
-      /* Medium desktop: 4 tiles */
-      .box {
-        width: 25%;
-        padding-bottom: 25%;
-      }
-    }
+}

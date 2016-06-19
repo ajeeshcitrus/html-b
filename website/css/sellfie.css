@@ -1,6 +1,18 @@
 body{
 	font-family: 'Roboto', sans-serif;
 }
+.login a{
+	color:#fff;
+	float:right;
+	margin:40px 20px 0 0;
+	z-index:1;
+}
+.scroll_mouse{
+	position:absolute;
+	bottom:5%;
+	width:100%;
+
+}
 .screens-nav {
     z-index: 11;
 }
@@ -314,8 +326,8 @@ body{
 	float:left;
 	text-align:left;
 	color:#fff;
-	font-size:42px;
-	padding:100px 0 20px 65px;
+	font-size:38px;
+	padding:95px 0 20px 65px;
 }
  /*images*/
  
@@ -323,7 +335,7 @@ body{
 	 float:left;
 	 width:100%;
 	 position:absolute;
-	 bottom:0;
+	 bottom:12%;
 	 background:#000;
  }
  #rig {
@@ -416,6 +428,22 @@ body{
 #rig li:hover .rig-text {
     transform:translateY(0px);
     opacity:0.9;
+}
+.main-footer {
+    position: absolute;
+    bottom: 0;
+	width: 100%;
+}
+
+.main-footer li{
+	float:left;
+	/*padding:10px 0 10px 0;*/
+}
+.main-footer li a:hover{
+	color:#ccc;
+}
+.main-footer ul{
+	float:left;
 }
 
 @media (max-width: 9000px) {

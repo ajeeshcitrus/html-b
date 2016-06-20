@@ -69,6 +69,12 @@ body {
 .shapes .circle {
 	border-radius:100%
 }
+.shapes .circle_new {
+	float:left;
+	width:50px;
+	height:50px;
+	background:#ffffff;
+}
 .shapes .triangle {
 	width:0;
 	height:0;

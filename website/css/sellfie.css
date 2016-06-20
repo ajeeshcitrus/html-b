@@ -20,6 +20,40 @@ body{
     font: 400 42px/71px 'Vaud Display', Helvetica, sans-serif;    
     text-align: center;
 }
+#part-terms .panel-title a{
+    color: #404040;
+	text-decoration:none;
+}
+#part-terms .panel-title a:hover{
+    color: #e40013;
+	text-decoration:none;
+}
+#part-terms .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: #fff;
+}
+#part-terms .panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+	padding:0 0 10px 0;
+}
+#part-terms .panel-default {
+    border-color: #fff;
+}
+#part-terms .panel {
+    margin-bottom: 0px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: none;
+}
+#part-terms .panel-body {
+    padding: 0;
+}
+.actives {
+  font-weight:bold!important;   
+}
 .login a{
 	color:#fff;
 	float:right;

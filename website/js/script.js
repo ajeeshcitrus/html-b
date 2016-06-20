@@ -3653,7 +3653,12 @@ AppCore = function() {
     }, t.prototype._onNavOverlayClick = function() {
         return this._menuOpened === !0 ? this.closeMenu() : void 0
     }, t.prototype.setColor = function(t) {
-        return this.header.attr("class", "main-header " + t)
+        if ($('.pics-container').hasClass('state-3')){
+            return this.header.attr("class", "main-header dark");
+        } else {
+        return this.header.attr("class", "main-header " + t);
+        }
+
     }, t.prototype.isMenuOpened = function() {
         return this._menuOpened
     }, t.prototype.openMenu = function() {

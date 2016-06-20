@@ -51,8 +51,14 @@ body{
 #part-terms .panel-body {
     padding: 0;
 }
-.actives {
-  font-weight:bold!important;   
+#part-terms .panel-collapse  {
+    padding: 0 0 0 25px;
+}
+.actives { 
+}
+.actives a{
+  font-weight:bold!important;
+  color:#e40013!important;
 }
 .login a{
 	color:#fff;

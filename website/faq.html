@@ -11,8 +11,8 @@
 <link rel="canonical" href="#">
 <title>Sellfie</title>
 <meta name="description" content="Sellfie">
-<!--<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/sellfie.css">-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/sellfie.css">
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
@@ -438,5 +438,14 @@
     </div>
   </div>
 </section>
+<script>
+$('.panel-heading a').click(function() {
+    $('.panel-heading').removeClass('actives');
+    $(this).parents('.panel-heading').addClass('actives');
+    
+    $('.panel-title').removeClass('actives'); //just to make a visual sense
+    $(this).parent().addClass('actives'); //just to make a visual sense
+ });
+</script>
 </body>
 </html>

@@ -1,6 +1,25 @@
 body{
 	font-family: 'Roboto', sans-serif;
 }
+#part-terms li strong{
+	font-weight:bold;
+}
+#part-terms a{
+	color:#e40013;
+}
+#part-terms .d li{
+	list-style-type: lower-alpha !important;
+	}
+#part-terms i{
+	font-style: italic;
+}
+#part-terms .content {
+    padding: 90px 20px;
+}	
+#part-terms h1 {
+    font: 400 42px/71px 'Vaud Display', Helvetica, sans-serif;    
+    text-align: center;
+}
 .login a{
 	color:#fff;
 	float:right;

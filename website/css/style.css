@@ -2135,6 +2135,69 @@ background:#FFF
 	color:#00a7e7;
 	background:#FFF
 }
+
+#part-terms {
+	text-align:left
+}
+#part-terms .content {
+	max-width:960px;
+	box-sizing:border-box;
+	padding:150px 20px;
+	margin:0 auto
+}
+#part-terms h1, #part-terms h2, #part-terms h3, #part-terms h4 {
+	margin:0
+}
+#part-terms h1 {
+	font:400 40px/71px 'Vaud Display', Helvetica, sans-serif;
+	color:#3c4651;
+	max-width:100%;
+}
+#part-terms h2 {
+	font:700 20px/42px 'Vaud Display', Helvetica, sans-serif;
+	color:#3c4651;
+	margin:15px 0 0;
+	text-align:left
+}
+#part-terms h3 {
+	font:700 15px/23px 'Vaud Display', Helvetica, sans-serif;
+	color:#3c4651;
+	margin:0 0 23px 50px;
+	text-align:left
+}
+#part-terms h4 {
+	font:400 15px/23px 'Vaud Display', Helvetica, sans-serif;
+	color:#3c4651;
+	margin:0 0 11px 100px;
+	text-align:left
+}
+#part-terms a, #part-terms li, #part-terms p {
+	color:#000;
+	font:400 16px/23px 'Vaud Display', Helvetica, sans-serif;
+	margin-bottom:23px
+}
+#part-terms li {
+	list-style:decimal;
+	margin-left:50px;
+	margin-bottom:11px
+}
+#part-terms li span {
+	font-style:italic;
+	margin-left:50px;
+	display:block
+}
+#part-terms ul {
+	margin-bottom:23px
+}
+#part-terms h2+p {
+	margin-top:23px
+}
+#part-terms img {
+	display:block;
+	width:100%;
+	max-width:600px;
+	margin:0 auto
+}
 @media screen and (max-width:1700px) {
 .main-nav a {
 	font-size:17px;

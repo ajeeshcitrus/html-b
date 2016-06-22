@@ -170,32 +170,18 @@
 
 	<div class="screen">
 		<div class="content">
-		<h1><span>Sell Product Or Collect Payments On Instagram</span>
+		<h1><span>Sell Product Or Collect Payments On</span>
 			</h1>
-		<div class="jumbotron">
-  		  <i class="glow in tlt">textillate.js</i>
-  		  <p class="tlt" data-in-effect="bounceInDown">
-  		  	A simple plugin for CSS3 text animations.
-  		  </p>
-
-		</div>
-			<div class="grid grid-pad">
-        <section class="col-1-1">
-            <div class="playground grid">
-              <div class="col-1-1 viewport">
-                  <div class="tlt">
-                    <ul class="texts" style="display: none">
-                      <li>Facebook</li>
-                      <li>WhatsApp</li>
-					  <li>Twitter</li>
-                      <li>Instagram</li>
-					  <li>YouTube</li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-        </section>
-      </div>
+		
+		<div class="text_ani">
+		<ul class="texts" style="display: none">
+		  <li>Facebook</li>
+		  <li>WhatsApp</li>
+		  <li>Twitter</li>
+		  <li>Instagram</li>
+		  <li>YouTube</li>
+		</ul>
+	  </div>
 			
 			<h2 style="margin-top: 50px;">Download the app or sign up</h2>
 			<a href="https://play.google.com/store/apps/details?id=com.citrus.citruspay&hl=en" class="appstore-link" target="_blank">
@@ -451,17 +437,17 @@ payment provider.</div>
 <script src="js/jquery.lettering.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 <script src="js/jquery.textillate.js"></script>
-<script>
 
-$('.tlt').textillate({
+<script>
+$('.text_ani').textillate({
   // the default selector to use when detecting multiple texts to animate
   selector: '.texts',
 
   // enable looping
-  loop: false,
+  loop: true,
 
   // sets the minimum display time for each text before it is replaced
-  minDisplayTime: 2000,
+  minDisplayTime: 1000,
 
   // sets the initial delay before starting the animation
   // (note that depending on the in effect you may need to manually apply 
@@ -481,7 +467,7 @@ $('.tlt').textillate({
   // in animation settings
   in: {
     // set the effect name
-    effect: 'fadeInLeftBig',
+    effect: 'flipInX',
 
     // set the delay factor applied to each consecutive character
     delayScale: 1.5,
@@ -490,7 +476,8 @@ $('.tlt').textillate({
     delay: 50,
 
     // set to true to animate all the characters at the same time
-    sync: false,
+    sync: true,
+	
 
     // randomize the character sequence 
     // (note that shuffle doesn't make sense with sync = true)
@@ -506,10 +493,10 @@ $('.tlt').textillate({
 
   // out animation settings.
   out: {
-    effect: 'hinge',
+    effect: 'flipOutX',
     delayScale: 1.5,
-    delay: 50,
-    sync: false,
+    delay: 100,
+    sync: true,
     shuffle: false,
     reverse: false,
     callback: function () {}

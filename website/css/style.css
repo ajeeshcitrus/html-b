@@ -1210,6 +1210,11 @@ form .submit-button .icon {
 	-webkit-transform:translate3d(0, 0, 0);
 	transform:translate3d(0, 0, 0)
 }
+#part-home .screen:nth-child(5).displayed .appstore-link, #part-home .screen:nth-child(3).displayed h1 span, #part-home .screen:nth-child(3).displayed h2 {
+	opacity:1;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0)
+}
 #part-home .screen:nth-child(1).displayed h1 span {
 	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 700ms, -webkit-transform 2000ms cubic-bezier(.19, 1, .22, 1) 700ms;
 	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 700ms, transform 2000ms cubic-bezier(.19, 1, .22, 1) 700ms
@@ -1223,6 +1228,10 @@ form .submit-button .icon {
 	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms, transform 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms
 }
 #part-home .screen:nth-child(3).displayed .appstore-link {
+	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms, -webkit-transform 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms;
+	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms, transform 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms
+}
+#part-home .screen:nth-child(5).displayed .appstore-link {
 	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms, -webkit-transform 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms;
 	transition:opacity 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms, transform 2000ms cubic-bezier(.19, 1, .22, 1) 1100ms
 }

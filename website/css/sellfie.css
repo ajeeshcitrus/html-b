@@ -5,8 +5,6 @@ body{
 .text_ani{
 	font: 600 48px 'Vaud Display', Helvetica, sans-serif;
 	color:#fff;
-	transition: opacity 2000ms cubic-bezier(.19, 1, .22, 1) 700ms, -webkit-transform 2000ms cubic-bezier(.19, 1, .22, 1) 700ms;
-    transition: opacity 2000ms cubic-bezier(.19, 1, .22, 1) 700ms, transform 2000ms cubic-bezier(.19, 1, .22, 1) 700ms;
 }
 
 #part-terms li strong{

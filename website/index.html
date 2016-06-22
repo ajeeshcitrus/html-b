@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/sellfie.css">
+	
+	<link href="css/animate.css" rel="stylesheet">
+	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -167,15 +170,63 @@
 
 	<div class="screen">
 		<div class="content">
-			<h1><span>Sell Product Or Collect Payments On				  
-			</span>			
+		<h1><span>Sell Product Or Collect Payments On Instagram</span>
 			</h1>
-			<img class="appstore-link" src="img/social.gif" data-src="#">
+		<div class="jumbotron">
+  		  <i class="glow in tlt">textillate.js</i>
+  		  <p class="tlt" data-in-effect="bounceInDown">
+  		  	A simple plugin for CSS3 text animations.
+  		  </p>
+
+		</div>
+			<div class="grid grid-pad">
+        <section class="col-1-1">
+            <div class="playground grid">
+              <div class="col-1-1 viewport">
+                  <div class="tlt">
+                    <ul class="texts" style="display: none">
+                      <li>Facebook</li>
+                      <li>WhatsApp</li>
+					  <li>Twitter</li>
+                      <li>Instagram</li>
+					  <li>YouTube</li>
+                    </ul>
+                  </div>
+              </div>
+			  
+              <div class="col-1-1 controls" style="padding-right: 0">
+                <form class="grid grid-pad">
+                  <div class="control col-1-2">
+                    <label>In Animation</label>
+                    <select data-key="effect" data-type="in"></select>
+                    <select data-key="type" data-type="in">
+                      <option value="">sequence</option>
+                      <option value="reverse">reverse</option>
+                      <option value="sync">sync</option>
+                      <option value="shuffle">shuffle</option>
+                    </select>
+                  </div>
+                  <div class="control col-1-2">
+                    <label>Out Animation</label>
+                    <select data-key="effect" data-type="out"></select>
+                    <select data-key="type" data-type="out">
+                      <option value="">sequence</option>
+                      <option value="reverse">reverse</option>
+                      <option value="sync">sync</option>
+                      <option selected="selected" value="shuffle">shuffle</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </section>
+      </div>
+			
 			<h2 style="margin-top: 50px;">Download the app or sign up</h2>
 			<a href="https://play.google.com/store/apps/details?id=com.citrus.citruspay&hl=en" class="appstore-link" target="_blank">
 				<img src="img/store.png" data-src="#">
 			</a>
-						
+				
 		</div>
 
 		<!-- <div class="front-shapes">
@@ -195,7 +246,9 @@
 	<!-- —————————————————————————————————————————o—————————————————————————————————————————o Screen 2 -->
 
 	<div class="screen">
+	
 		<div class="content container3">
+		  		
 			<div class="collect_head">Snap. Post. Sell</div>
 			<h4>Sell on social networks & other online channels. Get discovered and get paid from your customers.</h4>
 		</div>
@@ -419,6 +472,107 @@ payment provider.</div>
 
 <script type="text/javascript" src="js/script.js"></script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<script>
+ $(function (){
+    var log = function (msg) {
+      return function () {
+        if (console) console.log(msg);
+      }
+    }
+    $('code').each(function () {
+      var $this = $(this);
+      $this.text($this.html());
+    })
+
+    var animateClasses = 'flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut';
+
+    var $form = $('.playground form')
+      , $viewport = $('.playground .viewport');
+
+    var getFormData = function () {
+      var data = { 
+        loop: true, 
+        in: { callback: log('in callback called.') }, 
+        out: { callback: log('out callback called.') }
+      };
+      
+      $form.find('[data-key="effect"]').each(function () {
+        var $this = $(this)
+          , key = $this.data('key')
+          , type = $this.data('type');
+
+          data[type][key] = $this.val();
+      });
+
+      $form.find('[data-key="type"]').each(function () {
+        var $this = $(this)
+          , key = $this.data('key')
+          , type = $this.data('type')
+          , val = $this.val();
+
+          data[type].shuffle = (val === 'shuffle');
+          data[type].reverse = (val === 'reverse');
+          data[type].sync = (val === 'sync');
+      });
+
+      return data;
+    };
+
+    $.each(animateClasses.split(' '), function (i, value) {
+      var type = '[data-type]'
+        , option = '<option value="' + value + '">' + value + '</option>';
+
+      if (/Out/.test(value) || value === 'hinge') {
+        type = '[data-type="out"]';
+      } else if (/In/.test(value)) {
+        type = '[data-type="in"]';
+      } 
+
+      if (type) {
+        $form.find('[data-key="effect"]' + type).append(option);        
+      }
+    });
+
+    $form.find('[data-key="effect"][data-type="in"]').val('fadeInLeftBig');
+    $form.find('[data-key="effect"][data-type="out"]').val('hinge');
+
+    $('.jumbotron i')
+      .fitText(0.5)
+      .textillate({ in: { effect: 'flipInY' }});
+    
+    $('.jumbotron p')
+      .fitText(3.2, { maxFontSize: 18 })
+      .textillate({ initialDelay: 1000, in: { delay: 3, shuffle: true } });
+
+    setTimeout(function () {
+        $('.fade').addClass('in');
+    }, 250);
+
+    setTimeout(function () {
+      $('h1.glow').removeClass('in');
+    }, 2000);
+
+    var $tlt = $viewport.find('.tlt')
+      .on('start.tlt', log('start.tlt triggered.'))
+      .on('inAnimationBegin.tlt', log('inAnimationBegin.tlt triggered.'))
+      .on('inAnimationEnd.tlt', log('inAnimationEnd.tlt triggered.'))
+      .on('outAnimationBegin.tlt', log('outAnimationBegin.tlt triggered.'))
+      .on('outAnimationEnd.tlt', log('outAnimationEnd.tlt triggered.'))
+      .on('end.tlt', log('end.tlt'));
+    
+    $form.on('change', function () {
+      var obj = getFormData();
+      $tlt.textillate(obj);
+    }).trigger('change');
+
+  });
+
+	</script>
 </body>
  
 </html>

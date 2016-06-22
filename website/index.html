@@ -154,7 +154,7 @@
 			<svg class="icon twitter">  <use xlink:href="#twitter" "=""></use></svg>
 		</a></li>
 		<li><a href="#" class="youtube">
-			<svg class="icon youtube">  <use xlink:href="#youtube" "=""></use></svg>
+			<svg class="icon youtube">  <use xlink:href="#youtube"></use></svg>
 		</a></li>
 			</ul>
 </nav>
@@ -192,31 +192,6 @@
 					  <li>YouTube</li>
                     </ul>
                   </div>
-              </div>
-			  
-              <div class="col-1-1 controls" style="padding-right: 0">
-                <form class="grid grid-pad">
-                  <div class="control col-1-2">
-                    <label>In Animation</label>
-                    <select data-key="effect" data-type="in"></select>
-                    <select data-key="type" data-type="in">
-                      <option value="">sequence</option>
-                      <option value="reverse">reverse</option>
-                      <option value="sync">sync</option>
-                      <option value="shuffle">shuffle</option>
-                    </select>
-                  </div>
-                  <div class="control col-1-2">
-                    <label>Out Animation</label>
-                    <select data-key="effect" data-type="out"></select>
-                    <select data-key="type" data-type="out">
-                      <option value="">sequence</option>
-                      <option value="reverse">reverse</option>
-                      <option value="sync">sync</option>
-                      <option selected="selected" value="shuffle">shuffle</option>
-                    </select>
-                  </div>
-                </form>
               </div>
             </div>
         </section>
@@ -472,107 +447,83 @@ payment provider.</div>
 
 <script type="text/javascript" src="js/script.js"></script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="js/jquery.fittext.js"></script>
 <script src="js/jquery.lettering.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 <script src="js/jquery.textillate.js"></script>
 <script>
- $(function (){
-    var log = function (msg) {
-      return function () {
-        if (console) console.log(msg);
-      }
-    }
-    $('code').each(function () {
-      var $this = $(this);
-      $this.text($this.html());
-    })
 
-    var animateClasses = 'flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut';
+$('.tlt').textillate({
+  // the default selector to use when detecting multiple texts to animate
+  selector: '.texts',
 
-    var $form = $('.playground form')
-      , $viewport = $('.playground .viewport');
+  // enable looping
+  loop: false,
 
-    var getFormData = function () {
-      var data = { 
-        loop: true, 
-        in: { callback: log('in callback called.') }, 
-        out: { callback: log('out callback called.') }
-      };
-      
-      $form.find('[data-key="effect"]').each(function () {
-        var $this = $(this)
-          , key = $this.data('key')
-          , type = $this.data('type');
+  // sets the minimum display time for each text before it is replaced
+  minDisplayTime: 2000,
 
-          data[type][key] = $this.val();
-      });
+  // sets the initial delay before starting the animation
+  // (note that depending on the in effect you may need to manually apply 
+  // visibility: hidden to the element before running this plugin)
+  initialDelay: 0,
 
-      $form.find('[data-key="type"]').each(function () {
-        var $this = $(this)
-          , key = $this.data('key')
-          , type = $this.data('type')
-          , val = $this.val();
+  // set whether or not to automatically start animating
+  autoStart: true,
 
-          data[type].shuffle = (val === 'shuffle');
-          data[type].reverse = (val === 'reverse');
-          data[type].sync = (val === 'sync');
-      });
+  // custom set of 'in' effects. This effects whether or not the 
+  // character is shown/hidden before or after an animation  
+  inEffects: [],
 
-      return data;
-    };
+  // custom set of 'out' effects
+  outEffects: [ 'hinge' ],
 
-    $.each(animateClasses.split(' '), function (i, value) {
-      var type = '[data-type]'
-        , option = '<option value="' + value + '">' + value + '</option>';
+  // in animation settings
+  in: {
+    // set the effect name
+    effect: 'fadeInLeftBig',
 
-      if (/Out/.test(value) || value === 'hinge') {
-        type = '[data-type="out"]';
-      } else if (/In/.test(value)) {
-        type = '[data-type="in"]';
-      } 
+    // set the delay factor applied to each consecutive character
+    delayScale: 1.5,
 
-      if (type) {
-        $form.find('[data-key="effect"]' + type).append(option);        
-      }
-    });
+    // set the delay between each character
+    delay: 50,
 
-    $form.find('[data-key="effect"][data-type="in"]').val('fadeInLeftBig');
-    $form.find('[data-key="effect"][data-type="out"]').val('hinge');
+    // set to true to animate all the characters at the same time
+    sync: false,
 
-    $('.jumbotron i')
-      .fitText(0.5)
-      .textillate({ in: { effect: 'flipInY' }});
-    
-    $('.jumbotron p')
-      .fitText(3.2, { maxFontSize: 18 })
-      .textillate({ initialDelay: 1000, in: { delay: 3, shuffle: true } });
+    // randomize the character sequence 
+    // (note that shuffle doesn't make sense with sync = true)
+    shuffle: false,
 
-    setTimeout(function () {
-        $('.fade').addClass('in');
-    }, 250);
+    // reverse the character sequence 
+    // (note that reverse doesn't make sense with sync = true)
+    reverse: false,
 
-    setTimeout(function () {
-      $('h1.glow').removeClass('in');
-    }, 2000);
+    // callback that executes once the animation has finished
+    callback: function () {}
+  },
 
-    var $tlt = $viewport.find('.tlt')
-      .on('start.tlt', log('start.tlt triggered.'))
-      .on('inAnimationBegin.tlt', log('inAnimationBegin.tlt triggered.'))
-      .on('inAnimationEnd.tlt', log('inAnimationEnd.tlt triggered.'))
-      .on('outAnimationBegin.tlt', log('outAnimationBegin.tlt triggered.'))
-      .on('outAnimationEnd.tlt', log('outAnimationEnd.tlt triggered.'))
-      .on('end.tlt', log('end.tlt'));
-    
-    $form.on('change', function () {
-      var obj = getFormData();
-      $tlt.textillate(obj);
-    }).trigger('change');
+  // out animation settings.
+  out: {
+    effect: 'hinge',
+    delayScale: 1.5,
+    delay: 50,
+    sync: false,
+    shuffle: false,
+    reverse: false,
+    callback: function () {}
+  },
 
-  });
+  // callback that executes once textillate has finished 
+  callback: function () {},
 
-	</script>
+  // set the type of token to animate (available types: 'char' and 'word')
+  type: 'char'
+});
+ 
+
+</script>
 </body>
  
 </html>

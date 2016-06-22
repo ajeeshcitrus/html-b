@@ -6,7 +6,10 @@ body{
 	font: 600 48px 'Vaud Display', Helvetica, sans-serif;
 	color:#fff;
 }
-
+.white-header {
+    background: #fff;
+	border-bottom:1px solid #eceeef;
+}
 #part-terms li strong{
 	font-weight:bold;
 }
@@ -23,8 +26,8 @@ body{
     padding: 90px 20px;
 }	
 #part-terms h1 {
-    font: 400 42px/71px 'Vaud Display', Helvetica, sans-serif;    
-    text-align: center;
+    font: 400 42px/71px 'Vaud Display', Helvetica, sans-serif; 
+	    color: #f70f0f;
 }
 #part-terms .panel-title a{
     color: #404040;

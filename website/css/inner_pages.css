@@ -1,3 +1,32 @@
 .main-header.dark>a .icon {
     fill: #f70f0f!important;
 }
+
+/*Contact Us*/
+
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
+    height: 1.5rem;
+}
+.contact_us .md-form label.active {
+    font-size: 0.7rem;
+    left: .4rem;
+}
+.contact_us .md-form label{
+    color: #CCCCCC;
+    font-weight: normal!important;
+    top: 0.7rem;
+    left: .3rem;
+}
+.contact_us .md-form, .md-form .btn {
+    margin-bottom: -0.8rem;
+}
+.contact_us .form-control {
+    padding: .5rem .6rem 0 .6rem;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    margin-top: .9rem;
+    margin-bottom: 1rem;
+}

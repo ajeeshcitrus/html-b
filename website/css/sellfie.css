@@ -1,6 +1,41 @@
 body{
 	font-family: 'Roboto', sans-serif;
 }
+/*Contact Us*/
+
+.contact_us{
+	float:left;
+	width:800px;
+	background:#fff;
+	-webkit-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.75);
+}
+.contact_fields{
+	float:left;
+	width:480px;
+	padding:40px;
+}
+.address{
+	float:right;
+	width:40%;
+	color:#fff;
+	font-size:12px;
+	padding:40px 40px 0 40px;
+	background:#f13535;
+	font-size:12px;
+}
+.address_head{
+	float:left;
+	width:100%;
+	font-size:18px;
+}
+.address_text{
+	float:left;
+	width:100%;
+	font-size:11px;
+	padding:0 0 40px 0;
+}
 .space_40{
 	float:left;
 	width:100%;
@@ -41,6 +76,7 @@ body{
 #part-terms .panel-title a{
     color: #404040;
 	text-decoration:none;
+	font-size:16px;
 }
 #part-terms .panel-title a:hover{
     color: #e40013;
@@ -65,6 +101,9 @@ body{
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: none;
+}
+#part-terms a, #part-terms li, #part-terms p {
+	font-size:14px;
 }
 #part-terms .panel-body {
     padding: 0;
@@ -119,6 +158,8 @@ body{
     font-size: 45px;
     font-weight: 100;
 }
+
+
 #part-home .collect .pics-container {
 	z-index:2;
 	position:absolute;
@@ -194,7 +235,7 @@ body{
 	box-sizing:border-box
 }
 #part-home .collect .pics-container .pic .text p {
-	font:600 20px/24px 'Vaud Display', Helvetica, sans-serif;
+	font:600 16px/24px 'Vaud Display', Helvetica, sans-serif;
 	clear:both
 }
 #part-home .collect .pics-container .pic .text strong {

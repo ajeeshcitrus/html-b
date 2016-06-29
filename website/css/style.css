@@ -1319,16 +1319,16 @@ form .submit-button .icon {
 	transform:translate3d(-150px, 0, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(2) {
-	-webkit-transform:translate3d(70px, 0px, 0) rotate(0deg);
-	transform:translate3d(70px, 0px, 0) rotate(0deg)
+	-webkit-transform:translate3d(60px, 0px, 0) rotate(0deg);
+	transform:translate3d(60px, 0px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(3) {
 	-webkit-transform:translate3d(-150px, 230px, 0) rotate(0deg);
 	transform:translate3d(-150px, 230px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(4) {
-	-webkit-transform:translate3d(70px, 230px, 0) rotate(0deg);
-	transform:translate3d(70px, 230px, 0) rotate(0deg)
+	-webkit-transform:translate3d(60px, 230px, 0) rotate(0deg);
+	transform:translate3d(60px, 230px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(5) {
 	-webkit-transform:translate3d(0, 100px, 0) rotate(0deg);

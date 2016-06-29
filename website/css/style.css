@@ -87,7 +87,7 @@ h1 {
 	margin:0 auto 15px
 }
 h2 {
-	font:400 16px/31px 'Vaud Display', Helvetica, sans-serif;
+	
 	color:#FFF;
 	margin-bottom:25px
 }
@@ -1122,7 +1122,8 @@ form .submit-button .icon {
 	margin-bottom:5px
 }
 #part-home .screen:nth-child(1) h2 {
-	font:400 18px/34px 'Vaud Display', Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:300;
 	max-width:500px;
 	margin:0 auto
 }
@@ -1269,7 +1270,7 @@ form .submit-button .icon {
 }
 #part-home .screen:nth-child(2) {
 	z-index:2;
-	background:linear-gradient(to bottom, #1e242a 50%, #293039 100%)
+	background:#35ade6;
 }
 #part-home .screen:nth-child(2) h3 {
 	color:#fff
@@ -1322,12 +1323,12 @@ form .submit-button .icon {
 	transform:translate3d(70px, 0px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(3) {
-	-webkit-transform:translate3d(-150px, 220px, 0) rotate(0deg);
-	transform:translate3d(-150px, 220px, 0) rotate(0deg)
+	-webkit-transform:translate3d(-150px, 230px, 0) rotate(0deg);
+	transform:translate3d(-150px, 230px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(4) {
-	-webkit-transform:translate3d(70px, 220px, 0) rotate(0deg);
-	transform:translate3d(70px, 220px, 0) rotate(0deg)
+	-webkit-transform:translate3d(70px, 230px, 0) rotate(0deg);
+	transform:translate3d(70px, 230px, 0) rotate(0deg)
 }
 #part-home .screen:nth-child(2).displayed .pics .pic:nth-child(5) {
 	-webkit-transform:translate3d(0, 100px, 0) rotate(0deg);
@@ -2177,7 +2178,7 @@ background:#FFF
 #part-terms h3 {
 	font:700 15px/23px 'Vaud Display', Helvetica, sans-serif;
 	color:#3c4651;
-	margin:0 0 23px 50px;
+	margin:0 0 23px 0;
 	text-align:left
 }
 #part-terms h4 {

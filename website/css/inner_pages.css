@@ -9,19 +9,17 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 }
 .contact_us .md-form label.active {
     font-size: 0.7rem;
-    left: .4rem;
 }
 .contact_us .md-form label{
     color: #CCCCCC;
     font-weight: normal!important;
-    top: 0.7rem;
-    left: .3rem;
+    top: 1rem;
 }
 .contact_us .md-form, .md-form .btn {
     margin-bottom: -0.8rem;
 }
 .contact_us .form-control {
-    padding: .5rem .6rem 0 .6rem;
+    padding: .5rem 0rem 0 0rem;
     font-size: 1rem;
     line-height: 1;
     background-color: transparent;
